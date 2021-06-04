@@ -1,0 +1,170 @@
+JSONPath,JSON Type,Description,Cardinality
+$,OBJECT,,
+$.informationService,OBJECT,Description of an information service. [SWIM-SERV-001],1
+$.informationService.serviceAbstract,STRING,A brief summary of the service offering. [SWIM-SERV-007],1
+$.informationService.serviceProvider,OBJECT,An entity (person or organization) that offers the use of capabilities by means of a service. [SWIM-SERV-008],0..1
+$.informationService.serviceProvider.provider,STRING,The full official name of the organisation. [SWIM-SERV-008],0..1
+$.informationService.serviceProvider.providerDescription,STRING,Description of the organisational unit responsible for the service. [SWIM-SERV-008],0..1
+$.informationService.serviceProvider.providerType,ARRAY,The type of service provider. [SWIM-SERV-009],0..1
+$.informationService.serviceProvider.providerType.[*],STRING,A code listing types of stakeholders.,0..*
+$.informationService.serviceProvider.pointOfContact,ARRAY,"List of persons or groups within the service provider organization, suitable for making a human contact for any purpose. [SWIM-SERV-008]",0..1
+$.informationService.serviceProvider.pointOfContact.[*],OBJECT,"List of persons or groups within the service provider organization, suitable for making a human contact for any purpose. [SWIM-SERV-008]",0..*
+$.informationService.serviceProvider.pointOfContact.[*].name,STRING,The name of the point of contact. [SWIM-SERV-008],0..1
+$.informationService.serviceProvider.pointOfContact.[*].contactInformation,ARRAY,Information used to correspond with the point of contact. [SWIM-SERV-008],0..1
+$.informationService.serviceProvider.pointOfContact.[*].contactInformation.[*],OBJECT,Information used to correspond with the point of contact. [SWIM-SERV-008],0..*
+$.informationService.serviceProvider.pointOfContact.[*].contactInformation.[*].type,STRING,A code listing types of contact information.,1
+$.informationService.serviceProvider.pointOfContact.[*].contactInformation.[*].address,STRING,A phone number or an electronic mail address used to correspond with the point of contact. [SWIM-SERV-008],1
+$.informationService.serviceProvider.pointOfContact.[*].role,STRING,The role of the point of contact. [SWIM-SERV-008],0..1
+$.informationService.serviceCategorisation,OBJECT,A taxonomy used to classify a service by the type of service provided or by some other technological or architectural solution. [SWIM-SERV-009],1
+$.informationService.serviceCategorisation.serviceType,STRING,An indication of the status of the service with regard to SWIM Service conformance.,1
+$.informationService.serviceCategorisation.lifeCycleStage,STRING,"A classification of services based on their current, past, or future availability for provisioning.",0..1
+$.informationService.serviceCategorisation.businessActivityType,ARRAY,The type of business activity. [SWIM-REG-0004],0..1
+$.informationService.serviceCategorisation.businessActivityType.[*],STRING,A code listing the types of business activities.,0..*
+$.informationService.serviceCategorisation.intendedConsumer,ARRAY,The types of service consumers that this service is intended to serve. [SWIM-REG-0004],1
+$.informationService.serviceCategorisation.intendedConsumer.[*],STRING,A code listing types of stakeholders.,0..*
+$.informationService.serviceCategorisation.informationCategory,ARRAY,Information exchange area as defined in PCP. [SWIM-SERV-009],0..1
+$.informationService.serviceCategorisation.informationCategory.[*],STRING,,0..*
+$.informationService.serviceCategorisation.applicationMessageExchangePattern,ARRAY,The type of Application MEP. [SWIM-SERV-017],0..1
+$.informationService.serviceCategorisation.applicationMessageExchangePattern.[*],STRING,A code listing types of application message exchange patterns.,0..*
+$.informationService.serviceCategorisation.geospatialCategorisation,OBJECT,"The geographic coverage of the information provided by the service. [SWIM-REG-0004,SERV-OVW-008]",0..1
+$.informationService.serviceCategorisation.geospatialCategorisation.aerodrome,ARRAY,A four-letter code group formulated in accordance with rules prescribed by ICAO and assigned to the aerodrome. [SWIM-REG-0004],0..1
+$.informationService.serviceCategorisation.geospatialCategorisation.aerodrome.[*],STRING,,0..*
+$.informationService.serviceCategorisation.geospatialCategorisation.fir,ARRAY,A four-letter code group formulated in accordance with rules prescribed by ICAO and assigned to the airspace. [SWIM-REG-0004],0..1
+$.informationService.serviceCategorisation.geospatialCategorisation.fir.[*],STRING,,0..*
+$.informationService.serviceCategorisation.geospatialCategorisation.countryCode,ARRAY,Nationality letters of a State as defined by ICAO. [SWIM-REG-0004],0..1
+$.informationService.serviceCategorisation.geospatialCategorisation.countryCode.[*],STRING,,0..*
+$.informationService.serviceCategorisation.geospatialCategorisation.description,STRING,Additional optional description of the geographical extent.,0..1
+$.informationService.serviceCategorisation.geospatialCategorisation.region,ARRAY,An ICAO region as defined in Appendix 1 to the Directives to Regional Air Navigation Meetings and Rules of Procedure for their Conduct (ICAO Doc 8-AN/874). [SERV-OVW-008],0..1
+$.informationService.serviceCategorisation.geospatialCategorisation.region.[*],STRING,The list of ICAO Regions as defined in Appendix 1 to the Directives to Regional Air Navigation Meetings and Rules of Procedure for their Conduct (ICAO Doc 8-AN/874).,0..*
+$.informationService.generalDescription,OBJECT,"Description of the service in terms of what it provides, the purpose and under which conditions and quality levels the service is provided.",1
+$.informationService.generalDescription.operationalNeed,ARRAY,The operational need fulfilled by the service [SWIM-SERV-011],1
+$.informationService.generalDescription.operationalNeed.[*],OBJECT,A statement of the operational attributes of a system needed for the effective and/or efficient provision of air traffic services to users. [SWIM-SERV-011],0..*
+$.informationService.generalDescription.operationalNeed.[*].name,STRING,The name of the operational requirement. [SWIM-SERV-011],1
+$.informationService.generalDescription.operationalNeed.[*].description,STRING,Description of the operational needs fulfilled by the service. Includes or refers to information exchange requirements. [SWIM-SERV-011].,1
+$.informationService.generalDescription.functionality,ARRAY,A type of activity describing the functionality of a service. [SWIM-SERV-012],1
+$.informationService.generalDescription.functionality.[*],OBJECT,A type of activity describing the functionality of a service. [SWIM-SERV-012],0..*
+$.informationService.generalDescription.functionality.[*].description,STRING,Description of the service function. [SWIM-SERV-012],1
+$.informationService.generalDescription.functionality.[*].name,STRING,The name of the service function. [SWIM-SERV-012],1
+$.informationService.generalDescription.functionality.[*].realWorldEffect,STRING,An ultimate purpose associated with the interaction with the service. It may be the response to a request for information or the change in the state of some entities shared between the participants in the interaction. [SWIM-SERV-012],1
+$.informationService.generalDescription.accessAndUseCondition,ARRAY,"A condition which applies to accessing and using the service, such as legal constraint, service policies, service consumption constraints and security constraints. [SWIM-SERV-013]",0..1
+$.informationService.generalDescription.accessAndUseCondition.[*],OBJECT,"A condition which applies to accessing and using the service, such as legal constraint, service policies, service consumption constraints and security constraints. [SWIM-SERV-013]",0..*
+$.informationService.generalDescription.accessAndUseCondition.[*].name,STRING,The name of the condition. [SWIM-SERV-013],1
+$.informationService.generalDescription.accessAndUseCondition.[*].type,STRING,A code listing access and use conditions.,1
+$.informationService.generalDescription.accessAndUseCondition.[*].description,STRING,"Description of the conditions that influence accessing and using the service, such as legal constraint; service policies; service consumption constraints. Concrete access control and other security mechanisms are described in the technical section of the form. [SWIM-SERV-013]",1
+$.informationService.generalDescription.dateInOperation,STRING,Date at which the service went into operation or is planned to become operational.,0..1
+$.informationService.generalDescription.qualityOfService,ARRAY,The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-014],0..1
+$.informationService.generalDescription.qualityOfService.[*],OBJECT,The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-014],0..*
+$.informationService.generalDescription.qualityOfService.[*].name,STRING,The name of the quality of service. [SWIM-SERV-014],1
+$.informationService.generalDescription.qualityOfService.[*].description,STRING,"Description of the quality of service offered with regards to: 1)availability of the service; 2)response time of the service; and 3)throughput of the service (SWIM-SERV-014). It also describes less quantitative aspects suchs as 4)integrity, 5)confidentiality and possibly any other service related qualities defined in ISO 25010",1
+$.informationService.generalDescription.serviceSupport,STRING,Provision of material and guidance necessary for the use of the information service.,0..1
+$.informationService.generalDescription.validation,ARRAY,Activity whereby a service is checked for conformance with the service objectives and requirements. [SWIM-SERV-027],0..1
+$.informationService.generalDescription.validation.[*],OBJECT,An activity whereby a service is checked for conformance with the service objectives and requirements. Note: the service objectives and requirements are captured in the service overview and the technical specifications. [SWIM-SERV-027],0..*
+$.informationService.generalDescription.validation.[*].type,STRING,A code listing validation methods.,0..1
+$.informationService.generalDescription.validation.[*].description,STRING,The description of the service validation. [SWIM-SERV-027],1
+$.informationService.generalDescription.concepts,ARRAY,"Optional information intended for a good understanding of the service. This may cover design concepts related to the service, logical model, design considerations, or any other information not pertaining to the other fields.",0..1
+$.informationService.generalDescription.concepts.[*],OBJECT,"Optional information intended for a good understanding of the service. This may cover design concepts related to the service, logical model, design considerations, or any other information not pertaining to the other fields.",0..*
+$.informationService.generalDescription.concepts.[*].name,STRING,The name of the concept.,1
+$.informationService.generalDescription.concepts.[*].description,STRING,Description of the concept.,1
+$.informationService.informationDescription,OBJECT,A container for the description of the information exchanged by the information service. ,1
+$.informationService.informationDescription.informationDefinition,ARRAY,A formal representation of information concepts or data concepts. [SWIM-SERV-022],1
+$.informationService.informationDescription.informationDefinition.[*],OBJECT,A formal representation of information concepts or data concepts. [SWIM-SERV-022],0..*
+$.informationService.informationDescription.informationDefinition.[*].name,STRING,The name of the Information Definition. [SWIM-SERV-022],0..1
+$.informationService.informationDescription.informationDefinition.[*].description,STRING,The description of the Information Definition. [SWIM-SERV-022],0..1
+$.informationService.informationDescription.informationDefinition.[*].airmConformant,BOOLEAN,An indication whether the information definition used by the service conforms to the ATM Information Reference Model. [SWIM-SERV-023],0..1
+$.informationService.informationDescription.informationDefinition.[*].airmVersion,STRING,The applicable version of the ATM Information Reference Model. [SWIM-SERV-023],0..1
+$.informationService.informationDescription.exchangeSchema,ARRAY,Formal description of the data involved in an information exchange. [SWIM-SERV-019],0..1
+$.informationService.informationDescription.exchangeSchema.[*],OBJECT,Formal description of the data involved in an information exchange. [SWIM-SERV-019],0..*
+$.informationService.informationDescription.exchangeSchema.[*].name,STRING,The name of the exchange schema. [SWIM-SERV-019],0..1
+$.informationService.informationDescription.exchangeSchema.[*].reference,STRING,A reference to the exchange schema containing the specifications of the data structures. [SWIM-SERV-019].,0..1
+$.informationService.informationDescription.exchangeSchema.[*].schemaLanguage,STRING,"Description of the language used (e.g. XML, JSON). [SWIM-SERV-019]",0..1
+$.informationService.informationDescription.filtering,OBJECT,"The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-024]",0..1
+$.informationService.informationDescription.filtering.capability,ARRAY,"A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-024]",1
+$.informationService.informationDescription.filtering.capability.[*],OBJECT,"A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-024]",0..*
+$.informationService.informationDescription.filtering.capability.[*].name,STRING,The name of the filtering capability. [SWIM-SERV-024],1
+$.informationService.informationDescription.filtering.capability.[*].description,STRING,The description of the filtering capability. [SWIM-SERV-024],1
+$.informationService.informationDescription.sourceOfInformation,STRING,A description of the origins of information provided by the information service along with an indication whether there were any subsequent modifications.,0..1
+$.informationService.technicalDescription,OBJECT,"Description of the technical aspects of the service including data structures, interface and operations behaviour, security mechanisms and technical constraints",0..1
+$.informationService.technicalDescription.technicalConstraint,ARRAY,A characteristic of the environment or larger system within which the service operates. [SWIM-SERV-015],0..1
+$.informationService.technicalDescription.technicalConstraint.[*],OBJECT,A characteristic of the environment or larger system within which the service operates. [SWIM-SERV-015],0..*
+$.informationService.technicalDescription.technicalConstraint.[*].name,STRING,The name of the technical constraint. [SWIM-SERV-015],1
+$.informationService.technicalDescription.technicalConstraint.[*].description,STRING,The description of the technical constraint. [SWIM-SERV-015],1
+$.informationService.technicalDescription.serviceMonitoring,OBJECT,"Tracking state and operational conditions related to the execution, performance, and real-world effects of services. [SWIM-SERV-028]",0..1
+$.informationService.technicalDescription.serviceMonitoring.monitoringDescription,STRING,Description if available of the existing monitoring capabilities and how this can be used by the consumer. [SWIM-SERV-028].,1
+$.informationService.technicalDescription.behaviour,ARRAY,The manner in which a service operates under normal and unexpected conditions. [SWIM-SERV-025],0..1
+$.informationService.technicalDescription.behaviour.[*],OBJECT,The manner in which a service operates under normal and unexpected conditions. [SWIM-SERV-025],0..*
+$.informationService.technicalDescription.behaviour.[*].name,STRING,The name of the service behaviour. [SWIM-SERV-025],1
+$.informationService.technicalDescription.behaviour.[*].description,STRING,The description of the service behaviour. [SWIM-SERV-025],1
+$.informationService.references,OBJECT,References to complementary documents that provide additional details about the service. [SWIM-SERV-010],0..1
+$.informationService.references.serviceDocument,ARRAY,A document that relates to the information service.,0..1
+$.informationService.references.serviceDocument.[*],OBJECT,"A piece of written, printed, or electronic matter that provides information or evidence or that serves as an official record.",0..*
+$.informationService.references.serviceDocument.[*].documentType,STRING,A code describing types of documents.,0..1
+$.informationService.references.serviceDocument.[*].title,STRING,The name by which the document is formally known. [SWIM-SERV-005;SWIM-SERV-010],0..1
+$.informationService.references.serviceDocument.[*].version,STRING,The current version or revision level of the document.,0..1
+$.informationService.references.serviceDocument.[*].reference,STRING,An external reference at which the document can be retrieved or consulted.,0..1
+$.informationService.references.serviceDocument.[*].description,STRING,The description of the document.,0..1
+$.informationService.references.implementedStandard,ARRAY,A standard used for the implementation of the service.,0..1
+$.informationService.references.implementedStandard.[*],OBJECT,A standard used for the implementation of the service. [SWIM-SERV-010],0..*
+$.informationService.references.implementedStandard.[*].title,STRING,The name by which the document is formally known. [SWIM-SERV-005;SWIM-SERV-010],0..1
+$.informationService.references.implementedStandard.[*].version,STRING,The current version or revision level of the document. [SWIM-SERV-010],0..1
+$.informationService.references.implementedStandard.[*].reference,STRING,An external reference at which the standard can be retrieved or consulted.,0..1
+$.informationService.references.implementedStandard.[*].description,STRING,The description of the entity.,0..1
+$.informationService.references.implementedStandard.[*].standardType,STRING,A code listing types of service standards.,0..1
+$.informationService.references.implementedStandard.[*].conformanceStatement,STRING,A statement about the degree of conformance of the service against the standard. [SWIM-SERV-010],0..1
+$.informationService.references.implementedStandard.[*].isConformant,BOOLEAN,An indication whether the information service conforms to a reference. [SWIM-SERV-010],0..1
+$.informationService.serviceInterface,ARRAY,The means by which the underlying capabilities of a service are accessed.,1
+$.informationService.serviceInterface.[*],OBJECT,The means by which the underlying capabilities of a service are accessed. [SWIM-SERV-016],0..*
+$.informationService.serviceInterface.[*].name,STRING,The name of the interface. [SWIM-SERV-016],1
+$.informationService.serviceInterface.[*].description,STRING,The description of the entity. [SWIM-SERV-016],1
+$.informationService.serviceInterface.[*].interfaceProvisionSide,STRING,An indication that the interface is a provider side interface or a consumer side interface.,1
+$.informationService.serviceInterface.[*].tiPrimitiveMessageExchangePattern,STRING,A code listing types of primitive message exchange patterns.,0..1
+$.informationService.serviceInterface.[*].serviceInterfaceBinding,STRING,A code listing the interface bindings that enable services to exchange data with consuming applications.,0..1
+$.informationService.serviceInterface.[*].networkInterfaceBinding,STRING,A code listing the interface bindings that enable the SWIM TI to exchange data with the network.,0..1
+$.informationService.serviceInterface.[*].interfaceBindingDescription,STRING,"Complementary description of the protocols and other specifications used by the interface complementing the selected bindings, or any additional requirement specified in a SWIM TI Profile that is supported by the interface. [SWIM-SERV-018], [SWIM-SERV-019]",0..1
+$.informationService.serviceInterface.[*].endPoint,ARRAY,Location at which information is received to invoke and configure interaction. [SWIM-SERV-016],0..1
+$.informationService.serviceInterface.[*].endPoint.[*],OBJECT,Location at which information is received to invoke and configure interaction. [SWIM-SERV-016],0..*
+$.informationService.serviceInterface.[*].endPoint.[*].name,STRING,The name of the end point. [SWIM-SERV-016],0..1
+$.informationService.serviceInterface.[*].endPoint.[*].description,STRING,The description of the entity. [SWIM-SERV-016],0..1
+$.informationService.serviceInterface.[*].endPoint.[*].address,STRING,A network-visible identifier used to designate specific endpoints in a network. [SWIM-SERV-016],0..1
+$.informationService.serviceInterface.[*].endPoint.[*].addressableResource,ARRAY,A resource that can be addressed through this End Point. [SWIM-SERV-016],0..1
+$.informationService.serviceInterface.[*].endPoint.[*].addressableResource.[*],OBJECT,"Anything that can have an identifier. Although resources in general can be anything, SWIM is only concerned with those resources that are relevant to information services and therefore have some additional characteristics. In particular, they incorporate the concepts of ownership and control: a resource that appears in SWIM is a thing that has a name, may have reasonable representations and which can be said to be owned. The ownership of a resource is critically connected with the right to set policy on the resource.",0..*
+$.informationService.serviceInterface.[*].endPoint.[*].addressableResource.[*].name,STRING,The name of the resource.,0..1
+$.informationService.serviceInterface.[*].endPoint.[*].addressableResource.[*].description,STRING,The description of the resource.,0..1
+$.informationService.serviceInterface.[*].endPoint.[*].addressableResource.[*].type,STRING,A code listing types of technical resources.,0..1
+$.informationService.serviceInterface.[*].interfaceProtocol,ARRAY,A protocol used in transmitting the messages defined by the interface. [SWIM-SERV-019],0..1
+$.informationService.serviceInterface.[*].interfaceProtocol.[*],OBJECT,A protocol used in transmitting the messages defined by the interface. [SWIM-SERV-019],0..*
+$.informationService.serviceInterface.[*].interfaceProtocol.[*].description,STRING,The description of the interface protocol. [SWIM-SERV-019],1
+$.informationService.serviceInterface.[*].interfaceProtocol.[*].name,STRING,The name of the interface protocol. [SWIM-SERV-019],1
+$.informationService.serviceInterface.[*].interfaceProtocol.[*].type,STRING,The type of interface protocol. [SWIM-SERV-019],1
+$.informationService.serviceInterface.[*].operation,ARRAY,Specification of a transformation or query that an object may be called to execute. [SWIM-SERV-021],1
+$.informationService.serviceInterface.[*].operation.[*],OBJECT,Specification of a transformation or query that an object may be called to execute. [SWIM-SERV-021],0..*
+$.informationService.serviceInterface.[*].operation.[*].name,STRING,The name of the operation. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].description,STRING,The description of the operation. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].idempotency,STRING,A code indicating whether the operation is idempotent or non-idempotent.,0..1
+$.informationService.serviceInterface.[*].operation.[*].synchronicity,STRING,A code indicating whether the operation is synchronous or asynchronous.,0..1
+$.informationService.serviceInterface.[*].operation.[*].precondition,STRING,A description of the state or condition that should be true before the operation can proceed. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].tiProtocolMethod,ARRAY,A protocol method used to implement the operation. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].tiProtocolMethod.[*],STRING,,0..*
+$.informationService.serviceInterface.[*].operation.[*].operationMessage,ARRAY,A message associated with the operation. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].operationMessage.[*],OBJECT,A discrete unit of communication intended by the source for consumption by a given recipient or group of recipients. [SWIM-SERV-021],0..*
+$.informationService.serviceInterface.[*].operation.[*].operationMessage.[*].name,STRING,The name of the message. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].operationMessage.[*].description,STRING,The description of the message. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].operationMessage.[*].headers,STRING,The description of the headers. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].operationMessage.[*].direction,STRING,A code that indicates whether the message is input or output. ,0..1
+$.informationService.serviceInterface.[*].operation.[*].operationMessage.[*].isFault,BOOLEAN,An indication whether the message is a fault or not. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].operationMessage.[*].body,STRING,The description of the body. [SWIM-SERV-021],0..1
+$.informationService.serviceInterface.[*].operation.[*].processingConsideration,ARRAY,"A step, constraint or action that is required to be taken on data received as part of a service request (input) in order to produce the desired output or change of internal state. [SWIM-SERV-021]",0..1
+$.informationService.serviceInterface.[*].operation.[*].processingConsideration.[*],OBJECT,A step or action that is required to be taken on data received as part of a service request (input) in order to produce the desired output or change of internal state. [SWIM-SERV-021],0..*
+$.informationService.serviceInterface.[*].operation.[*].processingConsideration.[*].name,STRING,The name of the processing consideration. [SWIM-SERV-021],1
+$.informationService.serviceInterface.[*].operation.[*].processingConsideration.[*].description,STRING,The description of the processing consideration. [SWIM-SERV-021],1
+$.informationService.descriptionInformation,OBJECT,Meta information about the service description.,1
+$.informationService.descriptionInformation.descriptionIdentification,OBJECT,Information that supports the identification and citation of a service description. [SWIM-SERV-005],1
+$.informationService.descriptionInformation.descriptionIdentification.title,STRING,The name by which the document is formally known. [SWIM-SERV-005],1
+$.informationService.descriptionInformation.descriptionIdentification.referenceDate,STRING,A reference date for use in citing the service description. [SWIM-SERV-005],1
+$.informationService.descriptionInformation.descriptionIdentification.edition,STRING,The edition of the document. [SWIM-SERV-005],1
+$.informationService.descriptionInformation.abbreviations,ARRAY,Abbreviations or acronyms used by the service description.,1
+$.informationService.descriptionInformation.abbreviations.[*],OBJECT,An abbreviation or acronym used by the service description. [SWIM-SERV-003],0..*
+$.informationService.descriptionInformation.abbreviations.[*].name,STRING,The name of the abbreviation. [SWIM-SERV-003],1
+$.informationService.descriptionInformation.abbreviations.[*].description,STRING,The description of the abbreviation.,1
+$.informationService.serviceIdentification,OBJECT,Information for identifying the service.,1
+$.informationService.serviceIdentification.name,STRING,A piece of identifying information that gives stakeholders a way to reference or identify a service. [SWIM-SERV-006],1
+$.informationService.serviceIdentification.version,STRING,The version of the information service. [SWIM-SERV-006],1

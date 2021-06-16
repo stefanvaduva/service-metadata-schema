@@ -810,16 +810,14 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/Document"
-					},
-					"minItems": 1
+					}
 				},
 				"implementedStandard": {
 					"description": "A standard used for the implementation of the service.",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/ImplementedStandard"
-					},
-					"minItems": 1
+					}
 				}
 			}
 		},

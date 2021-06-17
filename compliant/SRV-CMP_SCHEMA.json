@@ -1,6 +1,22 @@
 {
 	"copyright": [
-		"ADD COPYRIGHT"
+		"Copyright 2021 EUROCONTROL",
+		"==========================================",
+		"Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:",
+		"1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.",
+		"2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer ",
+		"   in the documentation and/or other materials provided with the distribution.",
+		"3. Neither the name of the copyright holder nor the names of its contributors may be used to",
+		"   endorse or promote products derived from this software without specific prior written permission.",
+		"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS-IS AND ANY EXPRESS OR IMPLIED WARRANTIES,",
+		"INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.",
+		"IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES",
+		"(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)",
+		"HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT",
+		"(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+		"==========================================",
+		"Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://opensource.org/licenses/BSD-3-Clause",
+		"Details on EUROCONTROL: http://www.eurocontrol.int"
 	],
 	"title": "Service Description schema for SWIM_COMPLIANT",
 	"description": "",
@@ -22,18 +38,17 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description"
+				"name",
+				"description"
 			],
 			"properties": {
 				"name": {
 					"description": "The name of the abbreviation. [SWIM-SERV-003]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"description": {
 					"description": "The description of the abbreviation.",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				}
 			}
 		},
@@ -42,13 +57,14 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "type", "description"
+				"name",
+				"type",
+				"description"
 			],
 			"properties": {
 				"name": {
 					"description": "The name of the condition. [SWIM-SERV-013]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"type": {
 					"description": "The type of service access or use condition. [SWIM-SERV-013]",
@@ -56,8 +72,7 @@
 				},
 				"description": {
 					"description": "Description of the conditions that influence accessing and using the service, such as legal constraint; service policies; service consumption constraints. Concrete access control and other security mechanisms are described in the technical section of the form. [SWIM-SERV-013]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				}
 			}
 		},
@@ -66,18 +81,17 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description"
+				"name",
+				"description"
 			],
 			"properties": {
 				"name": {
 					"description": "The name of the concept.",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"description": {
 					"description": "Description of the concept.",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				}
 			}
 		},
@@ -86,7 +100,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"type", "address"
+				"type",
+				"address"
 			],
 			"properties": {
 				"type": {
@@ -95,8 +110,7 @@
 				},
 				"address": {
 					"description": "A phone number or an electronic mail address used to correspond with the point of contact. [SWIM-SERV-008]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				}
 			}
 		},
@@ -105,23 +119,22 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"title", "referenceDate", "edition"
+				"title",
+				"referenceDate",
+				"edition"
 			],
 			"properties": {
 				"title": {
 					"description": "The name by which the document is formally known. [SWIM-SERV-005]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"referenceDate": {
 					"description": "A reference date for use in citing the service description. [SWIM-SERV-005]",
-					"type": "string",
-					"format": "date"
+					"type": "string"
 				},
 				"edition": {
 					"description": "The edition of the document. [SWIM-SERV-005]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				}
 			}
 		},
@@ -130,7 +143,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"descriptionIdentification", "abbreviations"
+				"descriptionIdentification",
+				"abbreviations"
 			],
 			"properties": {
 				"descriptionIdentification": {
@@ -151,7 +165,9 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"documentType", "title", "version"
+				"documentType",
+				"title",
+				"version"
 			],
 			"properties": {
 				"documentType": {
@@ -160,13 +176,11 @@
 				},
 				"title": {
 					"description": "The name by which the document is formally known. [SWIM-SERV-005;SWIM-SERV-010]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"version": {
 					"description": "The current version or revision level of the document.",
-					"type": "string",
-					"minLength": 0
+					"type": "string"
 				},
 				"reference": {
 					"description": "An external reference at which the document can be retrieved or consulted.",
@@ -212,7 +226,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "schemaLanguage"
+				"name",
+				"schemaLanguage"
 			],
 			"properties": {
 				"name": {
@@ -251,7 +266,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description"
+				"name",
+				"description"
 			],
 			"properties": {
 				"name": {
@@ -269,18 +285,18 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"description", "name", "realWorldEffect"
+				"description",
+				"name",
+				"realWorldEffect"
 			],
 			"properties": {
 				"description": {
 					"description": "Description of the service function. [SWIM-SERV-012]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"name": {
 					"description": "The name of the service function. [SWIM-SERV-012]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"realWorldEffect": {
 					"description": "An ultimate purpose associated with the interaction with the service. It may be the response to a request for information or the change in the state of some entities shared between the participants in the interaction. [SWIM-SERV-012]",
@@ -332,7 +348,9 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"standardType", "isConformant"
+				"standardType",
+				"isConformant",
+				"title"
 			],
 			"properties": {
 				"title": {
@@ -370,7 +388,9 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description", "airmConformant"
+				"name",
+				"description",
+				"airmConformant"
 			],
 			"properties": {
 				"name": {
@@ -396,13 +416,21 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"serviceAbstract", "serviceProvider", "serviceCategorisation", "generalDescription", "informationDescription", "technicalDescription", "references", "serviceInterface", "descriptionInformation", "serviceIdentification"
+				"serviceAbstract",
+				"serviceProvider",
+				"serviceCategorisation",
+				"generalDescription",
+				"informationDescription",
+				"technicalDescription",
+				"references",
+				"serviceInterface",
+				"descriptionInformation",
+				"serviceIdentification"
 			],
 			"properties": {
 				"serviceAbstract": {
 					"description": "A brief summary of the service offering. [SWIM-SERV-007]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"serviceProvider": {
 					"description": "Description about who provides the service, when and how it is supported. [SWIM-SERV-008]",
@@ -451,18 +479,25 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description", "interfaceProvisionSide", "tiPrimitiveMessageExchangePattern", "serviceInterfaceBinding", "networkInterfaceBinding", "interfaceBindingDescription", "endPoint", "interfaceProtocol", "operation"
+				"name",
+				"description",
+				"interfaceProvisionSide",
+				"tiPrimitiveMessageExchangePattern",
+				"serviceInterfaceBinding",
+				"networkInterfaceBinding",
+				"interfaceBindingDescription",
+				"endPoint",
+				"interfaceProtocol",
+				"operation"
 			],
 			"properties": {
 				"name": {
 					"description": "The name of the interface. [SWIM-SERV-016]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"description": {
 					"description": "The description of the entity. [SWIM-SERV-016]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"interfaceProvisionSide": {
 					"description": "An indication that the interface is a provider side interface or a consumer side interface. [SWIM-SERV-016]",
@@ -482,8 +517,7 @@
 				},
 				"interfaceBindingDescription": {
 					"description": "Complementary description of the protocols and other specifications used by the interface complementing the selected bindings, or any additional requirement specified in a SWIM TI Profile that is supported by the interface. [SWIM-SERV-018], [SWIM-SERV-019]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"endPoint": {
 					"description": "Location at which information is received to invoke and configure interaction. [SWIM-SERV-016]",
@@ -515,18 +549,18 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"description", "name", "type"
+				"description",
+				"name",
+				"type"
 			],
 			"properties": {
 				"description": {
 					"description": "The description of the interface protocol. [SWIM-SERV-019]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"name": {
 					"description": "The name of the interface protocol. [SWIM-SERV-019]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"type": {
 					"description": "The type of interface protocol. [SWIM-SERV-019]",
@@ -539,7 +573,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "direction"
+				"name",
+				"direction"
 			],
 			"properties": {
 				"name": {
@@ -573,7 +608,9 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description", "operationMessage"
+				"name",
+				"description",
+				"operationMessage"
 			],
 			"properties": {
 				"name": {
@@ -625,7 +662,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description"
+				"name",
+				"description"
 			],
 			"properties": {
 				"name": {
@@ -643,13 +681,14 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "contactInformation", "role"
+				"name",
+				"contactInformation",
+				"role"
 			],
 			"properties": {
 				"name": {
 					"description": "The name of the point of contact. [SWIM-SERV-008]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"contactInformation": {
 					"description": "Information used to correspond with the point of contact. [SWIM-SERV-008]",
@@ -660,8 +699,7 @@
 				},
 				"role": {
 					"description": "The role of the point of contact. [SWIM-SERV-008]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				}
 			}
 		},
@@ -670,7 +708,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description"
+				"name",
+				"description"
 			],
 			"properties": {
 				"name": {
@@ -688,18 +727,17 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description"
+				"name",
+				"description"
 			],
 			"properties": {
 				"name": {
 					"description": "The name of the quality of service. [SWIM-SERV-014]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"description": {
 					"description": "Description of the quality of service offered with regards to: 1)availability of the service; 2)response time of the service; and 3)throughput of the service (SWIM-SERV-014). It also describes less quantitative aspects suchs as 4)integrity, 5)confidentiality and possibly any other service related qualities defined in ISO 25010",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				}
 			}
 		},
@@ -730,7 +768,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description"
+				"name",
+				"description"
 			],
 			"properties": {
 				"name": {
@@ -748,7 +787,12 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"serviceType", "businessActivityType", "intendedConsumer", "informationCategory", "applicationMessageExchangePattern", "lifeCycleStage"
+				"serviceType",
+				"businessActivityType",
+				"intendedConsumer",
+				"informationCategory",
+				"applicationMessageExchangePattern",
+				"lifeCycleStage"
 			],
 			"properties": {
 				"serviceType": {
@@ -802,7 +846,7 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"serviceDocument", "implementedStandard"
+				"implementedStandard"
 			],
 			"properties": {
 				"serviceDocument": {
@@ -810,14 +854,16 @@
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/Document"
-					}
+					},
+					"minItems": 1
 				},
 				"implementedStandard": {
 					"description": "A standard used for the implementation of the service.",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/ImplementedStandard"
-					}
+					},
+					"minItems": 1
 				}
 			}
 		},
@@ -826,7 +872,12 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"operationalNeed", "functionality", "accessAndUseCondition", "dateInOperation", "qualityOfService", "validation"
+				"operationalNeed",
+				"functionality",
+				"accessAndUseCondition",
+				"dateInOperation",
+				"qualityOfService",
+				"validation"
 			],
 			"properties": {
 				"operationalNeed": {
@@ -855,8 +906,7 @@
 				},
 				"dateInOperation": {
 					"description": "Date at which the service went into operation or is planned to become operational.",
-					"type": "string",
-					"format": "date"
+					"type": "string"
 				},
 				"qualityOfService": {
 					"description": "The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-014]",
@@ -892,18 +942,17 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "version"
+				"name",
+				"version"
 			],
 			"properties": {
 				"name": {
 					"description": "A piece of identifying information that gives stakeholders a way to reference or identify a service. [SWIM-SERV-006]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"version": {
 					"description": "The version of the information service. [SWIM-SERV-006]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				}
 			}
 		},
@@ -912,7 +961,8 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"informationDefinition", "exchangeSchema"
+				"informationDefinition",
+				"exchangeSchema"
 			],
 			"properties": {
 				"informationDefinition": {
@@ -951,8 +1001,7 @@
 			"properties": {
 				"monitoringDescription": {
 					"description": "Description if available of the existing monitoring capabilities and how this can be used by the consumer. [SWIM-SERV-028].",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				}
 			}
 		},
@@ -961,18 +1010,19 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"provider", "providerDescription", "providerType", "pointOfContact"
+				"provider",
+				"providerDescription",
+				"providerType",
+				"pointOfContact"
 			],
 			"properties": {
 				"provider": {
 					"description": "The full official name of the organisation. [SWIM-SERV-008]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"providerDescription": {
 					"description": "Description of the organisational unit responsible for the service. [SWIM-SERV-008]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				},
 				"providerType": {
 					"description": "The type of service provider. [SWIM-SERV-009]",
@@ -1021,37 +1071,22 @@
 				}
 			}
 		},
-		"SWIMRegistrySchema": {
-			"description": "",
-			"type": "object",
-			"additionalProperties": false,
-			"required": [
-				"informationService"
-			],
-			"properties": {
-				"informationService": {
-					"description": "The description of a service. [SWIM-SERV-001]",
-					"$ref": "#/definitions/InformationService"
-				}
-			}
-		},
 		"TechnicalConstraint": {
 			"description": "A characteristic of the environment or larger system within which the service operates. [SWIM-SERV-015]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name", "description"
+				"name",
+				"description"
 			],
 			"properties": {
 				"name": {
 					"description": "The name of the technical constraint. [SWIM-SERV-015]",
-					"type": "string",
-					"minLength": 1
+					"type": "string"
 				},
 				"description": {
 					"description": "The description of the technical constraint. [SWIM-SERV-015]",
-					"type": "string",
-					"minLength": 5
+					"type": "string"
 				}
 			}
 		},
@@ -1077,70 +1112,121 @@
 			"description": "A code listing access and use conditions.",
 			"type": "string",
 			"enum": [
-				"LEGAL_CONSTRAINT", "SERVICE_POLICY", "SERVICE_CONSUMPTION_CONSTRAINT", "OTHER", "SECURITY_CONSTRAINT"
+				"LEGAL_CONSTRAINT",
+				"SERVICE_POLICY",
+				"SERVICE_CONSUMPTION_CONSTRAINT",
+				"OTHER",
+				"SECURITY_CONSTRAINT"
 			]
 		},
 		"CodeApplicationMessageExchangePatternType": {
 			"description": "A code listing types of application message exchange patterns.",
 			"type": "string",
 			"enum": [
-				"REQUEST_REPLY", "ONE_WAY", "PUBLISH_SUBSCRIBE", "FAN_OUT", "SYNCHRONOUS_REQUEST_REPLY", "ASYNCHRONOUS_REQUEST_REPLY", "PUBLISH_SUBSCRIBE_WITH_PUSH_MECHANISM", "PUBLISH_SUBSCRIBE_WITH_PULL_MECHANISM", "BROKERED_PUBLISH_SUBSCRIBE_WITH_PUSH_MECHANISM"
+				"REQUEST_REPLY",
+				"ONE_WAY",
+				"PUBLISH_SUBSCRIBE",
+				"FAN_OUT",
+				"SYNCHRONOUS_REQUEST_REPLY",
+				"ASYNCHRONOUS_REQUEST_REPLY",
+				"PUBLISH_SUBSCRIBE_WITH_PUSH_MECHANISM",
+				"PUBLISH_SUBSCRIBE_WITH_PULL_MECHANISM",
+				"BROKERED_PUBLISH_SUBSCRIBE_WITH_PUSH_MECHANISM"
 			]
 		},
 		"CodeBusinessActivityType": {
 			"description": "A code listing the types of business activities.",
 			"type": "string",
 			"enum": [
-				"AERODROME_OPERATION", "AIRSPACE_ORGANISATION_AND_MANAGEMENT", "AIRSPACE_USER_OPERATIONS", "CONFLICT_MANAGEMENT", "DEMAND_AND_CAPACITY_BALANCING", "INFORMATION_MANAGEMENT", "SERVICE_DELIVERY_MANAGEMENT", "TRAFFIC_SYNCHRONISATION"
+				"AERODROME_OPERATION",
+				"AIRSPACE_ORGANISATION_AND_MANAGEMENT",
+				"AIRSPACE_USER_OPERATIONS",
+				"CONFLICT_MANAGEMENT",
+				"DEMAND_AND_CAPACITY_BALANCING",
+				"INFORMATION_MANAGEMENT",
+				"SERVICE_DELIVERY_MANAGEMENT",
+				"TRAFFIC_SYNCHRONISATION"
 			]
 		},
 		"CodeContactInformationType": {
 			"description": "A code listing types of contact information.",
 			"type": "string",
 			"enum": [
-				"PHONE", "EMAIL", "URL", "POSTAL", "OTHER"
+				"PHONE",
+				"EMAIL",
+				"URL",
+				"POSTAL",
+				"OTHER"
 			]
 		},
 		"CodeDirectionType": {
 			"description": "A code that indicates whether the message is input or output. ",
 			"type": "string",
 			"enum": [
-				"IN", "OUT"
+				"IN",
+				"OUT"
 			]
 		},
 		"CodeDocumentType": {
 			"description": "A code describing types of documents.",
 			"type": "string",
 			"enum": [
-				"POLICY_DOCUMENT", "SERVICE_STANDARD", "QUALITY_OF_SERVICE_DOCUMENT", "SERVICE_MODEL", "SERVICE_CERTIFICATION", "CODE_EXAMPLE", "SERVICE_BEHAVIOUR_DESCRIPTION", "PROTOCOL_SPECIFICATION", "MACHINE_READABLE_SERVICE_DESCRIPTION", "SERVICE_SPECIFICATION", "MESSAGE_EXAMPLE", "SERVICE_VALIDATION_REPORT", "AIRM_TRACE", "INFORMATION_DEFINITION"
+				"POLICY_DOCUMENT",
+				"SERVICE_STANDARD",
+				"QUALITY_OF_SERVICE_DOCUMENT",
+				"SERVICE_MODEL",
+				"SERVICE_CERTIFICATION",
+				"CODE_EXAMPLE",
+				"SERVICE_BEHAVIOUR_DESCRIPTION",
+				"PROTOCOL_SPECIFICATION",
+				"MACHINE_READABLE_SERVICE_DESCRIPTION",
+				"SERVICE_SPECIFICATION",
+				"MESSAGE_EXAMPLE",
+				"SERVICE_VALIDATION_REPORT",
+				"AIRM_TRACE",
+				"INFORMATION_DEFINITION"
 			]
 		},
 		"CodeICAORegionType": {
 			"description": "The list of ICAO Regions as defined in Appendix 1 to the Directives to Regional Air Navigation Meetings and Rules of Procedure for their Conduct (ICAO Doc 8-AN/874).",
 			"type": "string",
 			"enum": [
-				"AFI", "ASIA", "CAR", "EUR", "MID", "NAM", "NAT", "PAC", "SAM"
+				"AFI",
+				"ASIA",
+				"CAR",
+				"EUR",
+				"MID",
+				"NAM",
+				"NAT",
+				"PAC",
+				"SAM"
 			]
 		},
 		"CodeIdempotencyType": {
 			"description": "A code indicating whether the operation is idempotent or non-idempotent.",
 			"type": "string",
 			"enum": [
-				"IDEMPOTENT", "NON_IDEMPOTENT"
+				"IDEMPOTENT",
+				"NON_IDEMPOTENT"
 			]
 		},
 		"CodeInformationExchangeCategory": {
 			"description": "",
 			"type": "string",
 			"enum": [
-				"AERONAUTICAL_INFORMATION_EXCHANGE", "METEOROLOGICAL_INFORMATION_EXCHANGE", "COOPERATIVE_NETWORK_INFORMATION_EXCHANGE", "FLIGHT_INFORMATION_EXCHANGE", "SWIM_INFRASTRUCTURE_EXCHANGE"
+				"AERONAUTICAL_INFORMATION_EXCHANGE",
+				"METEOROLOGICAL_INFORMATION_EXCHANGE",
+				"COOPERATIVE_NETWORK_INFORMATION_EXCHANGE",
+				"FLIGHT_INFORMATION_EXCHANGE",
+				"SWIM_INFRASTRUCTURE_EXCHANGE"
 			]
 		},
 		"CodeInterfaceSideType": {
 			"description": "An indication that the interface is a provider side interface or a consumer side interface.",
 			"type": "string",
 			"enum": [
-				"PROVIDER_SIDE_INTERFACE", "CONSUMER_SIDE_INTERFACE"
+				"PROVIDER_SIDE_INTERFACE",
+				"CONSUMER_SIDE_INTERFACE"
 			]
 		},
 		"CodeLifeCycleStepType": {
@@ -1154,63 +1240,109 @@
 			"description": "A code listing the interface bindings that enable the SWIM TI to exchange data with the network.",
 			"type": "string",
 			"enum": [
-				"IPV4_UNICAST", "IPV4_SECURE_UNICAST", "IPV6_UNICAST", "IPV6_SECURE_UNICAST"
+				"IPV4_UNICAST",
+				"IPV4_SECURE_UNICAST",
+				"IPV6_UNICAST",
+				"IPV6_SECURE_UNICAST"
 			]
 		},
 		"CodePrimitiveMessageExchangePatternType": {
 			"description": "A code listing types of primitive message exchange patterns.",
 			"type": "string",
 			"enum": [
-				"FIRE_AND_FORGET", "SYNCHRONOUS_REQUEST_RESPONSE"
+				"FIRE_AND_FORGET",
+				"SYNCHRONOUS_REQUEST_RESPONSE"
 			]
 		},
 		"CodeServiceInterfaceBindingType": {
 			"description": "A code listing the interface bindings that enable services to exchange data with consuming applications.",
 			"type": "string",
 			"enum": [
-				"SWIM_TI_YP_1_0_WS_LIGHT", "SWIM_TI_YP_1_1_WS_LIGHT", "SWIM_TI_YP_1_0_WS_SOAP", "SWIM_TI_YP_1_1_WS_SOAP", "SWIM_TI_YP_1_0_WS_SOAP_WITH_BASIC_MESSAGE_SECURITY", "SWIM_TI_YP_1_1_WS_SOAP_WITH_BASIC_MESSAGE_SECURITY", "SWIM_TI_YP_1_0_WS_SOAP_WITH_MESSAGE_SECURITY", "SWIM_TI_YP_1_1_WS_SOAP_WITH_MESSAGE_SECURITY", "SWIM_TI_YP_1_0_WS_SOAP_WITH_FEDERATED_SECURITY", "SWIM_TI_YP_1_1_WS_SOAP_WITH_FEDERATED_SECURITY", "SWIM_TI_YP_1_0_WS-N_SOAP", "SWIM_TI_YP_1_1_WS-N_SOAP", "SWIM_TI_YP_1_0_WS-N_SOAP_WITH_BASIC_MESSAGE_SECURITY", "SWIM_TI_YP_1_1_WS-N_SOAP_WITH_BASIC_MESSAGE_SECURITY", "SWIM_TI_YP_1_0_WS-N_SOAP_WITH_MESSAGE_SECURITY", "SWIM_TI_YP_1_1_WS-N_SOAP_WITH_MESSAGE_SECURITY", "SWIM_TI_YP_1_0_WS-N_SOAP_WITH_FEDERATED_SECURITY", "SWIM_TI_YP_1_1_WS-N_SOAP_WITH_FEDERATED_SECURITY", "SWIM_TI_YP_1_0_AMQP_MESSAGING", "SWIM_TI_YP_1_1_AMQP_MESSAGING"
+				"SWIM_TI_YP_1_0_WS_LIGHT",
+				"SWIM_TI_YP_1_1_WS_LIGHT",
+				"SWIM_TI_YP_1_0_WS_SOAP",
+				"SWIM_TI_YP_1_1_WS_SOAP",
+				"SWIM_TI_YP_1_0_WS_SOAP_WITH_BASIC_MESSAGE_SECURITY",
+				"SWIM_TI_YP_1_1_WS_SOAP_WITH_BASIC_MESSAGE_SECURITY",
+				"SWIM_TI_YP_1_0_WS_SOAP_WITH_MESSAGE_SECURITY",
+				"SWIM_TI_YP_1_1_WS_SOAP_WITH_MESSAGE_SECURITY",
+				"SWIM_TI_YP_1_0_WS_SOAP_WITH_FEDERATED_SECURITY",
+				"SWIM_TI_YP_1_1_WS_SOAP_WITH_FEDERATED_SECURITY",
+				"SWIM_TI_YP_1_0_WS-N_SOAP",
+				"SWIM_TI_YP_1_1_WS-N_SOAP",
+				"SWIM_TI_YP_1_0_WS-N_SOAP_WITH_BASIC_MESSAGE_SECURITY",
+				"SWIM_TI_YP_1_1_WS-N_SOAP_WITH_BASIC_MESSAGE_SECURITY",
+				"SWIM_TI_YP_1_0_WS-N_SOAP_WITH_MESSAGE_SECURITY",
+				"SWIM_TI_YP_1_1_WS-N_SOAP_WITH_MESSAGE_SECURITY",
+				"SWIM_TI_YP_1_0_WS-N_SOAP_WITH_FEDERATED_SECURITY",
+				"SWIM_TI_YP_1_1_WS-N_SOAP_WITH_FEDERATED_SECURITY",
+				"SWIM_TI_YP_1_0_AMQP_MESSAGING",
+				"SWIM_TI_YP_1_1_AMQP_MESSAGING"
 			]
 		},
 		"CodeServiceStandardType": {
 			"description": "A code listing types of service standards.",
 			"type": "string",
 			"enum": [
-				"EUROCONTROL_SPECIFICATION_FOR_SWIM_SERVICE_DESCRIPTION", "EUROCONTROL_SPECIFICATION_FOR_SWIM_INFORMATION_DEFINITION", "EUROCONTROL_SPECIFICATION_FOR_SWIM_TECHNICAL_INFRASTRUCTURE", "SERVICE_STANDARD"
+				"EUROCONTROL_SPECIFICATION_FOR_SWIM_SERVICE_DESCRIPTION",
+				"EUROCONTROL_SPECIFICATION_FOR_SWIM_INFORMATION_DEFINITION",
+				"EUROCONTROL_SPECIFICATION_FOR_SWIM_TECHNICAL_INFRASTRUCTURE",
+				"SERVICE_STANDARD"
 			]
 		},
 		"CodeServiceValidationType": {
 			"description": "A code listing validation methods.",
 			"type": "string",
 			"enum": [
-				"COLLABORATIVE_VALIDATION", "INDEPENDENT_VALIDATION", "SELF_VALIDATION", "USER_VALIDATION", "NOT_VALIDATED"
+				"COLLABORATIVE_VALIDATION",
+				"INDEPENDENT_VALIDATION",
+				"SELF_VALIDATION",
+				"USER_VALIDATION",
+				"NOT_VALIDATED"
 			]
 		},
 		"CodeStakeholderType": {
 			"description": "A code listing types of stakeholders.",
 			"type": "string",
 			"enum": [
-				"CIVIL_AIRSPACE_USER", "MILITARY_AIRSPACE_USER", "CIVIL_AIR_NAVIGATION_SERVICE_PROVIDER", "MILITARY_AIR_NAVIGATION_SERVICE_PROVIDER", "AIR_TRAFFIC_SERVICE_PROVIDER", "REGULATED_METEOROLOGICAL_SERVICE_PROVIDER", "AERONAUTICAL_INFORMATION_SERVICE_PROVIDER", "COMMUNICATION_NAVIGATION_AND_SURVEILLANCE_SERVICE_PROVIDER", "PROVIDER_OF_DATA_SERVICES", "NETWORK_MANAGER", "AIRPORT_OPERATOR", "AIRSIDE_GROUND_HANDLER", "MILITARY_DEFENCE_CENTRE"
+				"CIVIL_AIRSPACE_USER",
+				"MILITARY_AIRSPACE_USER",
+				"CIVIL_AIR_NAVIGATION_SERVICE_PROVIDER",
+				"MILITARY_AIR_NAVIGATION_SERVICE_PROVIDER",
+				"AIR_TRAFFIC_SERVICE_PROVIDER",
+				"REGULATED_METEOROLOGICAL_SERVICE_PROVIDER",
+				"AERONAUTICAL_INFORMATION_SERVICE_PROVIDER",
+				"COMMUNICATION_NAVIGATION_AND_SURVEILLANCE_SERVICE_PROVIDER",
+				"PROVIDER_OF_DATA_SERVICES",
+				"NETWORK_MANAGER",
+				"AIRPORT_OPERATOR",
+				"AIRSIDE_GROUND_HANDLER",
+				"MILITARY_DEFENCE_CENTRE"
 			]
 		},
 		"CodeSWIMServiceConformanceStatusType": {
 			"description": "An indication of the status of the service with regard to SWIM Service conformance.",
 			"type": "string",
 			"enum": [
-				"SWIM_COMPLIANT", "SWIM_CANDIDATE", "DEFINITION"
+				"SWIM_COMPLIANT"
 			]
 		},
 		"CodeSynchronicityType": {
 			"description": "A code indicating whether the operation is synchronous or asynchronous.",
 			"type": "string",
 			"enum": [
-				"SYNCHRONOUS", "ASYNCHRONOUS"
+				"SYNCHRONOUS",
+				"ASYNCHRONOUS"
 			]
 		},
 		"CodeTechnicalResourceType": {
 			"description": "A code listing types of technical resources.",
 			"type": "string",
 			"enum": [
-				"QUEUE", "REST_RESOURCE", "SERVICE_REQUEST_LISTENER", "TOPIC"
+				"QUEUE",
+				"REST_RESOURCE",
+				"SERVICE_REQUEST_LISTENER",
+				"TOPIC"
 			]
 		}
 	}

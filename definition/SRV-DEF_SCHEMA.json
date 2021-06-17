@@ -1,6 +1,22 @@
 {
   "copyright": [
-    "ADD COPYRIGHT"
+    "Copyright 2021 EUROCONTROL",
+    "==========================================",
+    "Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:",
+    "1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.",
+    "2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer ",
+    "   in the documentation and/or other materials provided with the distribution.",
+    "3. Neither the name of the copyright holder nor the names of its contributors may be used to",
+    "   endorse or promote products derived from this software without specific prior written permission.",
+    "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS AS-IS AND ANY EXPRESS OR IMPLIED WARRANTIES,",
+    "INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.",
+    "IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES",
+    "(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)",
+    "HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT",
+    "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+    "==========================================",
+    "Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://opensource.org/licenses/BSD-3-Clause",
+    "Details on EUROCONTROL: http://www.eurocontrol.int"
   ],
   "title": "Service Description schema for SWIM_DEFINITION",
   "description": "",
@@ -28,13 +44,11 @@
       "properties": {
         "name": {
           "description": "The name of the abbreviation. [SWIM-SERV-003]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "description": {
           "description": "The description of the abbreviation.",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         }
       }
     },
@@ -50,8 +64,7 @@
       "properties": {
         "name": {
           "description": "The name of the condition. [SWIM-SERV-013]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "type": {
           "description": "The type of service access or use condition. [SWIM-SERV-013]",
@@ -59,8 +72,7 @@
         },
         "description": {
           "description": "Description of the conditions that influence accessing and using the service, such as legal constraint; service policies; service consumption constraints. Concrete access control and other security mechanisms are described in the technical section of the form. [SWIM-SERV-013]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         }
       }
     },
@@ -75,13 +87,11 @@
       "properties": {
         "name": {
           "description": "The name of the concept.",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "description": {
           "description": "Description of the concept.",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         }
       }
     },
@@ -100,8 +110,7 @@
         },
         "address": {
           "description": "A phone number or an electronic mail address used to correspond with the point of contact. [SWIM-SERV-008]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         }
       }
     },
@@ -117,8 +126,7 @@
       "properties": {
         "title": {
           "description": "The name by which the document is formally known. [SWIM-SERV-005]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "referenceDate": {
           "description": "A reference date for use in citing the service description. [SWIM-SERV-005]",
@@ -127,8 +135,7 @@
         },
         "edition": {
           "description": "The edition of the document. [SWIM-SERV-005]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         }
       }
     },
@@ -165,13 +172,11 @@
         },
         "title": {
           "description": "The name by which the document is formally known. [SWIM-SERV-005;SWIM-SERV-010]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "version": {
           "description": "The current version or revision level of the document.",
-          "type": "string",
-          "minLength": 0
+          "type": "string"
         },
         "reference": {
           "description": "An external reference at which the document can be retrieved or consulted.",
@@ -276,13 +281,11 @@
       "properties": {
         "description": {
           "description": "Description of the service function. [SWIM-SERV-012]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "name": {
           "description": "The name of the service function. [SWIM-SERV-012]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "realWorldEffect": {
           "description": "An ultimate purpose associated with the interaction with the service. It may be the response to a request for information or the change in the state of some entities shared between the participants in the interaction. [SWIM-SERV-012]",
@@ -333,6 +336,9 @@
       "description": "A standard used for the implementation of the service. [SWIM-SERV-010]",
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "title"
+      ],
       "properties": {
         "title": {
           "description": "The name by which the document is formally known. [SWIM-SERV-005;SWIM-SERV-010]",
@@ -403,8 +409,7 @@
       "properties": {
         "serviceAbstract": {
           "description": "A brief summary of the service offering. [SWIM-SERV-007]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "serviceProvider": {
           "description": "Description about who provides the service, when and how it is supported. [SWIM-SERV-008]",
@@ -460,13 +465,11 @@
       "properties": {
         "name": {
           "description": "The name of the interface. [SWIM-SERV-016]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "description": {
           "description": "The description of the entity. [SWIM-SERV-016]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "interfaceProvisionSide": {
           "description": "An indication that the interface is a provider side interface or a consumer side interface. [SWIM-SERV-016]",
@@ -486,8 +489,7 @@
         },
         "interfaceBindingDescription": {
           "description": "Complementary description of the protocols and other specifications used by the interface complementing the selected bindings, or any additional requirement specified in a SWIM TI Profile that is supported by the interface. [SWIM-SERV-018], [SWIM-SERV-019]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "endPoint": {
           "description": "Location at which information is received to invoke and configure interaction. [SWIM-SERV-016]",
@@ -524,13 +526,11 @@
       "properties": {
         "description": {
           "description": "The description of the interface protocol. [SWIM-SERV-019]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "name": {
           "description": "The name of the interface protocol. [SWIM-SERV-019]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "type": {
           "description": "The type of interface protocol. [SWIM-SERV-019]",
@@ -643,8 +643,7 @@
       "properties": {
         "name": {
           "description": "The name of the point of contact. [SWIM-SERV-008]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "contactInformation": {
           "description": "Information used to correspond with the point of contact. [SWIM-SERV-008]",
@@ -655,8 +654,7 @@
         },
         "role": {
           "description": "The role of the point of contact. [SWIM-SERV-008]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         }
       }
     },
@@ -690,13 +688,11 @@
       "properties": {
         "name": {
           "description": "The name of the quality of service. [SWIM-SERV-014]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "description": {
           "description": "Description of the quality of service offered with regards to: 1)availability of the service; 2)response time of the service; and 3)throughput of the service (SWIM-SERV-014). It also describes less quantitative aspects suchs as 4)integrity, 5)confidentiality and possibly any other service related qualities defined in ISO 25010",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         }
       }
     },
@@ -883,13 +879,11 @@
       "properties": {
         "name": {
           "description": "A piece of identifying information that gives stakeholders a way to reference or identify a service. [SWIM-SERV-006]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "version": {
           "description": "The version of the information service. [SWIM-SERV-006]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         }
       }
     },
@@ -935,8 +929,7 @@
       "properties": {
         "monitoringDescription": {
           "description": "Description if available of the existing monitoring capabilities and how this can be used by the consumer. [SWIM-SERV-028].",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         }
       }
     },
@@ -947,13 +940,11 @@
       "properties": {
         "provider": {
           "description": "The full official name of the organisation. [SWIM-SERV-008]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "providerDescription": {
           "description": "Description of the organisational unit responsible for the service. [SWIM-SERV-008]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         },
         "providerType": {
           "description": "The type of service provider. [SWIM-SERV-009]",
@@ -996,20 +987,6 @@
         }
       }
     },
-    "SWIMRegistrySchema": {
-      "description": "",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "informationService"
-      ],
-      "properties": {
-        "informationService": {
-          "description": "The description of a service. [SWIM-SERV-001]",
-          "$ref": "#/definitions/InformationService"
-        }
-      }
-    },
     "TechnicalConstraint": {
       "description": "A characteristic of the environment or larger system within which the service operates. [SWIM-SERV-015]",
       "type": "object",
@@ -1021,13 +998,11 @@
       "properties": {
         "name": {
           "description": "The name of the technical constraint. [SWIM-SERV-015]",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "description": {
           "description": "The description of the technical constraint. [SWIM-SERV-015]",
-          "type": "string",
-          "minLength": 5
+          "type": "string"
         }
       }
     },
@@ -1267,8 +1242,6 @@
       "description": "An indication of the status of the service with regard to SWIM Service conformance.",
       "type": "string",
       "enum": [
-        "SWIM_COMPLIANT",
-        "SWIM_CANDIDATE",
         "DEFINITION"
       ]
     },

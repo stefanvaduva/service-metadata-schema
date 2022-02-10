@@ -20,7 +20,7 @@
 	],
 	"title": "Service Description schema for SWIM_COMPLIANT",
 	"description": "",
-	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"type": "object",
 	"additionalProperties": false,
 	"required": [

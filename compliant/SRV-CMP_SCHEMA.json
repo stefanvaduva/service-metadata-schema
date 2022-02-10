@@ -948,11 +948,11 @@
 			],
 			"properties": {
 				"name": {
-					"description": "A piece of identifying information that gives stakeholders a way to reference or identify a service. [SWIM-SERV-006]",
+					"description": "A piece of identifying information that gives stakeholders a way to reference or identify a service. [SWIM-SERV-040]",
 					"type": "string"
 				},
 				"version": {
-					"description": "The version of the information service. [SWIM-SERV-006]",
+					"description": "The version of the information service. [SWIM-SERV-040]",
 					"type": "string"
 				}
 			}

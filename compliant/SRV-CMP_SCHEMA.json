@@ -130,7 +130,8 @@
 				},
 				"referenceDate": {
 					"description": "A reference date for use in citing the service description. [SWIM-SERV-030]",
-					"type": "string"
+					"type": "string",
+					"format": "date"
 				},
 				"edition": {
 					"description": "The edition of the document. [SWIM-SERV-030]",

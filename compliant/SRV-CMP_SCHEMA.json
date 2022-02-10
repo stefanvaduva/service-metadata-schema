@@ -115,7 +115,7 @@
 			}
 		},
 		"DescriptionIdentification": {
-			"description": "Information that supports the identification and citation of a service description. [SWIM-SERV-005]",
+			"description": "Information that supports the identification and citation of a service description. [SWIM-SERV-030]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
@@ -125,15 +125,15 @@
 			],
 			"properties": {
 				"title": {
-					"description": "The name by which the document is formally known. [SWIM-SERV-005]",
+					"description": "The name by which the document is formally known. [SWIM-SERV-030]",
 					"type": "string"
 				},
 				"referenceDate": {
-					"description": "A reference date for use in citing the service description. [SWIM-SERV-005]",
+					"description": "A reference date for use in citing the service description. [SWIM-SERV-030]",
 					"type": "string"
 				},
 				"edition": {
-					"description": "The edition of the document. [SWIM-SERV-005]",
+					"description": "The edition of the document. [SWIM-SERV-030]",
 					"type": "string"
 				}
 			}

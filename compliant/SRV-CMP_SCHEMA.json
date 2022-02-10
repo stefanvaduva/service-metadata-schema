@@ -430,7 +430,7 @@
 			],
 			"properties": {
 				"serviceAbstract": {
-					"description": "A brief summary of the service offering. [SWIM-SERV-007]",
+					"description": "A brief summary of the service offering. [SWIM-SERV-050]",
 					"type": "string"
 				},
 				"serviceProvider": {

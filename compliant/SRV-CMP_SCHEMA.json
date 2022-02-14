@@ -96,7 +96,7 @@
 			}
 		},
 		"ContactInformation": {
-			"description": "Information used to correspond with the point of contact. [SWIM-SERV-008]",
+			"description": "Information used to correspond with the point of contact. [SWIM-SERV-070]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
@@ -105,11 +105,11 @@
 			],
 			"properties": {
 				"type": {
-					"description": "The type of contact information. [SWIM-SERV-008]",
+					"description": "The type of contact information. [SWIM-SERV-070]",
 					"$ref": "#/definitions/CodeContactInformationType"
 				},
 				"address": {
-					"description": "A phone number or an electronic mail address used to correspond with the point of contact. [SWIM-SERV-008]",
+					"description": "A phone number or an electronic mail address used to correspond with the point of contact. [SWIM-SERV-070]",
 					"type": "string"
 				}
 			}
@@ -678,7 +678,7 @@
 			}
 		},
 		"PointOfContact": {
-			"description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose. [SWIM-SERV-008]",
+			"description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose. [SWIM-SERV-070]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
@@ -688,18 +688,18 @@
 			],
 			"properties": {
 				"name": {
-					"description": "The name of the point of contact. [SWIM-SERV-008]",
+					"description": "The name of the point of contact. [SWIM-SERV-070]",
 					"type": "string"
 				},
 				"contactInformation": {
-					"description": "Information used to correspond with the point of contact. [SWIM-SERV-008]",
+					"description": "Information used to correspond with the point of contact. [SWIM-SERV-070]",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/ContactInformation"
 					}
 				},
 				"role": {
-					"description": "The role of the point of contact. [SWIM-SERV-008]",
+					"description": "The role of the point of contact. [SWIM-SERV-070]",
 					"type": "string"
 				}
 			}

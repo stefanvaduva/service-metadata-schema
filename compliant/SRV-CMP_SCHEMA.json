@@ -918,8 +918,12 @@
 					"minItems": 3
 				},
 				"serviceSupport": {
-					"description": "Provision of material and guidance necessary for the use of the information service.",
-					"type": "string"
+					"description": "Service support point of contact information. [SWIM-SERV-080]",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/PointOfContact"
+					},
+					"minItems": 1
 				},
 				"validation": {
 					"description": "Activity whereby a service is checked for conformance with the service objectives and requirements. [SWIM-SERV-027]",

@@ -1013,8 +1013,7 @@
 			"required": [
 				"provider",
 				"providerDescription",
-				"providerType",
-				"pointOfContact"
+				"providerType"
 			],
 			"properties": {
 				"provider": {

@@ -678,7 +678,7 @@
 			}
 		},
 		"PointOfContact": {
-			"description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose. [SWIM-SERV-070]",
+			"description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose.",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
@@ -688,11 +688,11 @@
 			],
 			"properties": {
 				"name": {
-					"description": "The name of the point of contact. [SWIM-SERV-070]",
+					"description": "The name of the point of contact.",
 					"type": "string"
 				},
 				"contactInformation": {
-					"description": "Information used to correspond with the point of contact. [SWIM-SERV-070]",
+					"description": "Information used to correspond with the point of contact.",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/ContactInformation"

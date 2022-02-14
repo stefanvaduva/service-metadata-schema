@@ -699,7 +699,7 @@
 					}
 				},
 				"role": {
-					"description": "The role of the point of contact. [SWIM-SERV-070]",
+					"description": "The role of the point of contact.",
 					"type": "string"
 				}
 			}
@@ -1033,7 +1033,7 @@
 					"minItems": 1
 				},
 				"pointOfContact": {
-					"description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose. [SWIM-SERV-008]",
+					"description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose. [SWIM-SERV-070]",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/PointOfContact"

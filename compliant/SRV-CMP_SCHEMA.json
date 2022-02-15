@@ -438,7 +438,7 @@
 					"$ref": "#/definitions/ServiceProvider"
 				},
 				"serviceCategorisation": {
-					"description": "A taxonomy used to classify a service by the type of service provided or by some other technological or architectural solution. [SWIM-SERV-009]",
+					"description": "A taxonomy used to classify a service by the type of service provided or by some other technological or architectural solution.",
 					"$ref": "#/definitions/ServiceCategorisation"
 				},
 				"generalDescription": {

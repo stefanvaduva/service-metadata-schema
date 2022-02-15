@@ -1222,11 +1222,13 @@
 			"description": "A categorisation of services based on information domains. [SWIM-SERV-100]. Ref.: https://reference.swim.aero/information-services/service-categories/CodeInformationDomainType.html",
 			"type": "string",
 			"enum": [
-				"AERONAUTICAL_INFORMATION_EXCHANGE",
-				"METEOROLOGICAL_INFORMATION_EXCHANGE",
-				"COOPERATIVE_NETWORK_INFORMATION_EXCHANGE",
-				"FLIGHT_INFORMATION_EXCHANGE",
-				"SWIM_INFRASTRUCTURE_EXCHANGE"
+				"AERONAUTICAL_INFORMATION",
+				"METEOROLOGICAL_INFORMATION",
+				"FLIGHT_INFORMATION",
+				"SWIM_INFRASTRUCTURE_INFORMATION",
+				"CAPACITY_DEMAND_AND_FLOW_INFORMATION",
+				"SURVEILLANCE_INFORMATION",
+				"ENVIRONMENT_INFORMATION"
 			]
 		},
 		"CodeInterfaceSideType": {

@@ -825,7 +825,10 @@
 					"description": "A categorisation of services based on information domains. Multiple categories are acceptable, each category is a choice between an enumeration or a string in case no value in the enumeration is applicable. [SWIM-SERV-100]",
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/CodeInformationExchangeCategory"
+						"oneOf":[
+							{"type": "string"},
+							{"$ref": "#/definitions/CodeInformationExchangeCategory"}
+						]
 					},
 					"minItems": 1
 				},

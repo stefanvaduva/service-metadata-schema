@@ -802,7 +802,7 @@
 					"$ref": "#/definitions/CodeSWIMServiceConformanceStatusType"
 				},
 				"lifeCycleStage": {
-					"description": "A classification of services based on their current, past, or future availability for provisioning. [SWIM-REG-0004]",
+					"description": "A classification of services based on their current, past, or future availability for provisioning. [SWIM-SERV-110]",
 					"$ref": "#/definitions/CodeLifeCycleStepType"
 				},
 				"businessActivityType": {

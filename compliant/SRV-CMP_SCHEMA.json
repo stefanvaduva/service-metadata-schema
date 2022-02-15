@@ -1219,7 +1219,7 @@
 			]
 		},
 		"CodeInformationExchangeCategory": {
-			"description": "",
+			"description": "A categorisation of services based on information domains. [SWIM-SERV-100]. Ref.: https://reference.swim.aero/information-services/service-categories/CodeInformationDomainType.html",
 			"type": "string",
 			"enum": [
 				"AERONAUTICAL_INFORMATION_EXCHANGE",

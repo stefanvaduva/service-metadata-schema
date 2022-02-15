@@ -793,7 +793,8 @@
 				"intendedConsumer",
 				"informationCategory",
 				"applicationMessageExchangePattern",
-				"lifeCycleStage"
+				"lifeCycleStage",
+				"geospatialCategorisation"
 			],
 			"properties": {
 				"serviceType": {

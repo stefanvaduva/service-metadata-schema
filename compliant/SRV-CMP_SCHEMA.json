@@ -793,7 +793,7 @@
 				"intendedConsumer",
 				"informationCategory",
 				"applicationMessageExchangePattern",
-				"lifeCycleStage",
+				"lifeCycle",
 				"geospatialCategorisation"
 			],
 			"properties": {
@@ -801,9 +801,21 @@
 					"description": "An indication of the status of the service with regard to SWIM Service conformance. [SWIM-REG-0004]",
 					"$ref": "#/definitions/CodeSWIMServiceConformanceStatusType"
 				},
-				"lifeCycleStage": {
+				"lifeCycle": {
 					"description": "A classification of services based on their current, past, or future availability for provisioning. [SWIM-SERV-110]",
-					"$ref": "#/definitions/CodeLifeCycleStepType"
+					"type": "array",
+					"items": {
+						"type": "object",
+						"required": [
+							"lifeCycleStage"
+						],
+						"properties": {
+							"lifeCycleStage": {"$ref": "#/definitions/CodeLifeCycleStepType"},
+							"from": {"type": "string", "format": "date"},
+							"to": {"type": "string", "format": "date"}
+						}
+					},
+					"minItems": 1
 				},
 				"businessActivityType": {
 					"description": "The type of business activity. [SWIM-REG-0004]",

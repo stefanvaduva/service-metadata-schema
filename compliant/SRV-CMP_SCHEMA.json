@@ -838,7 +838,7 @@
 					"minItems": 1
 				},
 				"geospatialCategorisation": {
-					"description": "The geographic coverage of the information provided by the service. [SWIM-SERV-009]",
+					"description": "The geographic coverage of the information provided by the service. [SWIM-SERV-090]",
 					"$ref": "#/definitions/GeographicalExtent"
 				}
 			}

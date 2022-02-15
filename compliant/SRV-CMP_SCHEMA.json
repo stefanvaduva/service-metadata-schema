@@ -1243,7 +1243,9 @@
 			"description": "A classification of services based on their current, past, or future availability for provisioning.",
 			"type": "string",
 			"enum": [
-				"OPERATIONAL"
+				"OPERATIONAL",
+				"PROSPECTIVE",
+				"RETIRED"
 			]
 		},
 		"CodeNetworkInterfaceBindingType": {

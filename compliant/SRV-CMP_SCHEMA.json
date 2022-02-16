@@ -655,7 +655,7 @@
 			}
 		},
 		"OperationalNeed": {
-			"description": "A statement of the operational attributes of a system needed for the effective and/or efficient provision of air traffic services to users. [SWIM-SERV-011]",
+			"description": "A statement of the operational attributes of a system needed for the effective and/or efficient provision of air traffic services to users. [SWIM-SERV-130]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
@@ -664,11 +664,11 @@
 			],
 			"properties": {
 				"name": {
-					"description": "The name of the operational requirement. [SWIM-SERV-011]",
+					"description": "The name of the operational requirement. [SWIM-SERV-130]",
 					"type": "string"
 				},
 				"description": {
-					"description": "Description of the operational needs fulfilled by the service. Includes or refers to information exchange requirements. [SWIM-SERV-011].",
+					"description": "Description of the operational needs fulfilled by the service. Includes or refers to information exchange requirements. [SWIM-SERV-130].",
 					"type": "string"
 				}
 			}
@@ -894,7 +894,7 @@
 			],
 			"properties": {
 				"operationalNeed": {
-					"description": "The operational need fulfilled by the service [SWIM-SERV-011]",
+					"description": "The operational need fulfilled by the service [SWIM-SERV-130]",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/OperationalNeed"

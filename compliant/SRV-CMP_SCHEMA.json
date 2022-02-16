@@ -871,7 +871,7 @@
 					"minItems": 1
 				},
 				"implementedStandard": {
-					"description": "A standard used for the implementation of the service.",
+					"description": "A standard used for the implementation of the service [SWIM-SERV-120].",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/ImplementedStandard"

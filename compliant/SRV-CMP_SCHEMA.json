@@ -654,6 +654,47 @@
 				}
 			}
 		},
+		"OperationalEnvironment": {
+			"description": "Information about the operational environment is useful to get an understanding of the service. Information about the operational needs addressed by the service and the capabilities the service offers supports decision making in terms of the service suitability within a particular operational context. [SWIM-SERV-130]",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"operationalNeeds": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/OperationalNeed"
+					},
+					"minItems": 1
+				},
+				"capabilities": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/SupportedCapability"
+					},
+					"minItems": 1
+				}
+			},
+			"minProperties": 1
+		},
+		"SupportedCapability": {
+			"description": "A statement of the operational capabilities supported by the service. [SWIM-SERV-130]",
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"name",
+				"description"
+			],
+			"properties": {
+				"name": {
+					"description": "The name of the supported capability. [SWIM-SERV-130]",
+					"type": "string"
+				},
+				"description": {
+					"description": "Description of the operational capability supported by the service. [SWIM-SERV-130].",
+					"type": "string"
+				}
+			}
+		},
 		"OperationalNeed": {
 			"description": "A statement of the operational attributes of a system needed for the effective and/or efficient provision of air traffic services to users. [SWIM-SERV-130]",
 			"type": "object",
@@ -885,7 +926,7 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"operationalNeed",
+				"operationalEnvironment",
 				"functionality",
 				"accessAndUseCondition",
 				"dateInOperation",
@@ -893,13 +934,9 @@
 				"validation"
 			],
 			"properties": {
-				"operationalNeed": {
-					"description": "The operational need fulfilled by the service [SWIM-SERV-130]",
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/OperationalNeed"
-					},
-					"minItems": 1
+				"operationalEnvironment": {
+					"description": "Details about the operational environment to which the service relates. [SWIM-SERV-130]",
+					"$ref": "#/definitions/OperationalEnvironment"
 				},
 				"functionality": {
 					"description": "A type of activity describing the functionality of a service. [SWIM-SERV-012]",

@@ -681,8 +681,7 @@
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name",
-				"description"
+				"name"
 			],
 			"properties": {
 				"name": {
@@ -692,16 +691,21 @@
 				"description": {
 					"description": "Description of the operational capability supported by the service. [SWIM-SERV-130].",
 					"type": "string"
+				},
+				"reference": {
+					"description": "An external reference at which the document can be retrieved or consulted.",
+					"type": "string"
 				}
-			}
+
+			},
+			"minProperties": 2
 		},
 		"OperationalNeed": {
 			"description": "A statement of the operational attributes of a system needed for the effective and/or efficient provision of air traffic services to users. [SWIM-SERV-130]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name",
-				"description"
+				"name"
 			],
 			"properties": {
 				"name": {
@@ -711,8 +715,13 @@
 				"description": {
 					"description": "Description of the operational needs fulfilled by the service. Includes or refers to information exchange requirements. [SWIM-SERV-130].",
 					"type": "string"
+				},
+				"reference": {
+					"description": "An external reference at which the document can be retrieved or consulted.",
+					"type": "string"
 				}
-			}
+			},
+			"minProperties": 2
 		},
 		"PointOfContact": {
 			"description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose.",

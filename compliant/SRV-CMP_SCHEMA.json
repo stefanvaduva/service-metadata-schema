@@ -282,25 +282,28 @@
 			}
 		},
 		"Functionality": {
-			"description": "A type of activity describing the functionality of a service. [SWIM-SERV-012]",
+			"description": "A type of activity describing the functionality of a service. [SWIM-SERV-140]",
 			"type": "object",
 			"additionalProperties": false,
-			"required": [
-				"description",
-				"name",
-				"realWorldEffect"
+			"oneOf": [
+				{"required": ["name", "description", "realWorldEffect"]},
+				{"required": ["name", "reference"]}
 			],
 			"properties": {
 				"description": {
-					"description": "Description of the service function. [SWIM-SERV-012]",
+					"description": "Description of the service function. [SWIM-SERV-140]",
 					"type": "string"
 				},
 				"name": {
-					"description": "The name of the service function. [SWIM-SERV-012]",
+					"description": "The name of the service function. [SWIM-SERV-140]",
 					"type": "string"
 				},
 				"realWorldEffect": {
-					"description": "An ultimate purpose associated with the interaction with the service. It may be the response to a request for information or the change in the state of some entities shared between the participants in the interaction. [SWIM-SERV-012]",
+					"description": "An ultimate purpose associated with the interaction with the service. It may be the response to a request for information or the change in the state of some entities shared between the participants in the interaction. [SWIM-SERV-140]",
+					"type": "string"
+				},
+				"reference": {
+					"description": "An external reference at which the document can be retrieved or consulted. [SWIM-SERV-140]",
 					"type": "string"
 				}
 			}
@@ -948,7 +951,7 @@
 					"$ref": "#/definitions/OperationalEnvironment"
 				},
 				"functionality": {
-					"description": "A type of activity describing the functionality of a service. [SWIM-SERV-012]",
+					"description": "A type of activity describing the functionality of a service. [SWIM-SERV-140]",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/Functionality"

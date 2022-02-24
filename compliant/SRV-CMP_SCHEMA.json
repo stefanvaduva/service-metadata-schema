@@ -1120,7 +1120,7 @@
 			],
 			"properties": {
 				"technicalConstraint": {
-					"description": "A characteristic of the environment or larger system within which the service operates. [SWIM-SERV-015]",
+					"description": "A characteristic of the environment or larger system within which the service operates. [SWIM-SERV-170]",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/TechnicalConstraint"
@@ -1141,23 +1141,27 @@
 			}
 		},
 		"TechnicalConstraint": {
-			"description": "A characteristic of the environment or larger system within which the service operates. [SWIM-SERV-015]",
+			"description": "A characteristic of the environment or larger system within which the service operates. [SWIM-SERV-170]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name",
-				"description"
+				"name"
 			],
 			"properties": {
 				"name": {
-					"description": "The name of the technical constraint. [SWIM-SERV-015]",
+					"description": "The name of the technical constraint. [SWIM-SERV-170]",
 					"type": "string"
 				},
 				"description": {
-					"description": "The description of the technical constraint. [SWIM-SERV-015]",
+					"description": "The description of the technical constraint. [SWIM-SERV-170]",
+					"type": "string"
+				},
+				"reference": {
+					"description": "An external reference at which the document can be retrieved or consulted.",
 					"type": "string"
 				}
-			}
+			},
+			"minProperties": 2
 		},
 		"ValidationOfService": {
 			"description": "An activity whereby a service is checked for conformance with the service objectives and requirements. Note: the service objectives and requirements are captured in the service overview and the technical specifications. [SWIM-SERV-027]",

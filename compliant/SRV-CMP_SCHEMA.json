@@ -53,28 +53,32 @@
 			}
 		},
 		"AccessAndUseCondition": {
-			"description": "A condition which applies to accessing and using the service, such as legal constraint, service policies, service consumption constraints and security constraints. [SWIM-SERV-013]",
+			"description": "A condition which applies to accessing and using the service, such as legal constraint, service policies, service consumption constraints and security constraints. [SWIM-SERV-150]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
 				"name",
-				"type",
-				"description"
+				"type"
 			],
 			"properties": {
 				"name": {
-					"description": "The name of the condition. [SWIM-SERV-013]",
+					"description": "The name of the condition. [SWIM-SERV-150]",
 					"type": "string"
 				},
 				"type": {
-					"description": "The type of service access or use condition. [SWIM-SERV-013]",
+					"description": "The type of service access or use condition. [SWIM-SERV-150]",
 					"$ref": "#/definitions/CodeAccessAndUseConditionType"
 				},
 				"description": {
-					"description": "Description of the conditions that influence accessing and using the service, such as legal constraint; service policies; service consumption constraints. Concrete access control and other security mechanisms are described in the technical section of the form. [SWIM-SERV-013]",
+					"description": "Description of the conditions that influence accessing and using the service, such as legal constraint; service policies; service consumption constraints. Concrete access control and other security mechanisms are described in the technical section of the form. [SWIM-SERV-150]",
+					"type": "string"
+				},
+				"reference": {
+					"description": "An external reference at which the document can be retrieved or consulted.",
 					"type": "string"
 				}
-			}
+			},
+			"minProperties": 3
 		},
 		"Concept": {
 			"description": "Optional information intended for a good understanding of the service. This may cover design concepts related to the service, logical model, design considerations, or any other information not pertaining to the other fields.",
@@ -940,7 +944,7 @@
 			"required": [
 				"operationalEnvironment",
 				"functionality",
-				"accessAndUseCondition",
+				"accessAndUseConditions",
 				"dateInOperation",
 				"qualityOfService",
 				"validation"
@@ -958,8 +962,8 @@
 					},
 					"minItems": 1
 				},
-				"accessAndUseCondition": {
-					"description": "A condition which applies to accessing and using the service, such as legal constraint, service policies, service consumption constraints and security constraints. [SWIM-SERV-013]",
+				"accessAndUseConditions": {
+					"description": "Conditions which apply to accessing and using the service, such as legal constraint, service policies, service consumption constraints and security constraints. [SWIM-SERV-150]",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/AccessAndUseCondition"
@@ -1180,8 +1184,7 @@
 				"LEGAL_CONSTRAINT",
 				"SERVICE_POLICY",
 				"SERVICE_CONSUMPTION_CONSTRAINT",
-				"OTHER",
-				"SECURITY_CONSTRAINT"
+				"OTHER"
 			]
 		},
 		"CodeApplicationMessageExchangePatternType": {

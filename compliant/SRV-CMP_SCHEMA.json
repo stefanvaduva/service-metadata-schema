@@ -1178,12 +1178,13 @@
 			}
 		},
 		"CodeAccessAndUseConditionType": {
-			"description": "A code listing access and use conditions.",
+			"description": "A code listing access and use conditions. [SWIM-SERV-150], [SWIM-SERV-160]",
 			"type": "string",
 			"enum": [
 				"LEGAL_CONSTRAINT",
 				"SERVICE_POLICY",
 				"SERVICE_CONSUMPTION_CONSTRAINT",
+				"SECURITY_CONSTRAINT",
 				"OTHER"
 			]
 		},

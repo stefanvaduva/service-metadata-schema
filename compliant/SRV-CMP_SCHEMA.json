@@ -777,23 +777,27 @@
 			}
 		},
 		"QualityOfService": {
-			"description": "The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-014]",
+			"description": "The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-180]",
 			"type": "object",
 			"additionalProperties": false,
 			"required": [
-				"name",
-				"description"
+				"name"
 			],
 			"properties": {
 				"name": {
-					"description": "The name of the quality of service. [SWIM-SERV-014]",
+					"description": "The name of the quality of service. [SWIM-SERV-180]",
 					"type": "string"
 				},
 				"description": {
-					"description": "Description of the quality of service offered with regards to: 1)availability of the service; 2)response time of the service; and 3)throughput of the service (SWIM-SERV-014). It also describes less quantitative aspects suchs as 4)integrity, 5)confidentiality and possibly any other service related qualities defined in ISO 25010",
+					"description": "Description of the quality of service offered. [SWIM-SERV-180]",
+					"type": "string"
+				},
+				"reference": {
+					"description": "An external reference at which the document can be retrieved or consulted.",
 					"type": "string"
 				}
-			}
+			},
+			"minProperties": 2
 		},
 		"Resource": {
 			"description": "Anything that can have an identifier. Although resources in general can be anything, SWIM is only concerned with those resources that are relevant to information services and therefore have some additional characteristics. In particular, they incorporate the concepts of ownership and control: a resource that appears in SWIM is a thing that has a name, may have reasonable representations and which can be said to be owned. The ownership of a resource is critically connected with the right to set policy on the resource.",
@@ -946,7 +950,7 @@
 				"functionality",
 				"accessAndUseConditions",
 				"dateInOperation",
-				"qualityOfService",
+				"qualitiesOfService",
 				"validation"
 			],
 			"properties": {
@@ -974,13 +978,37 @@
 					"description": "Date at which the service went into operation or is planned to become operational.",
 					"type": "string"
 				},
-				"qualityOfService": {
-					"description": "The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-014]",
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/QualityOfService"
-					},
-					"minItems": 3
+				"qualitiesOfService": {
+					"description": "The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-180]",
+					"type": "object",
+					"required": [
+						"performance",
+						"reliability",
+						"security"
+					],
+					"properties": {
+						"performance": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/QualityOfService"
+							},
+							"minItems": 1
+						},
+						"reliability": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/QualityOfService"
+							},
+							"minItems": 1
+						},
+						"security": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/QualityOfService"
+							},
+							"minItems": 1
+						}
+					}
 				},
 				"serviceSupport": {
 					"description": "Service support point of contact information. [SWIM-SERV-080]",

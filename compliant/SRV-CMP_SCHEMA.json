@@ -1084,7 +1084,7 @@
 					"$ref": "#/definitions/Filtering"
 				},
 				"sourceOfInformation": {
-					"description": "A description of the origins of information provided by the information service along with an indication whether there were any subsequent modifications.",
+					"description": "A description of the origins of information provided by the information service along with an indication whether there were any subsequent modifications. [SWIM-SERV-190]",
 					"type": "string"
 				}
 			}

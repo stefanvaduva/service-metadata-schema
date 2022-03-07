@@ -924,10 +924,40 @@
           "minItems": 1
         },
         "applicationMessageExchangePattern": {
-          "description": "The type of Application MEP. [SWIM-SERV-017]",
+          "description": "The type of Application MEP. [SWIM-SERV-210]",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/CodeApplicationMessageExchangePatternType"
+            "anyOf": [
+              {
+                "type": "object",
+                "required": [
+                  "name",
+                  "reference"
+                ],
+                "properties": {
+                  "name": {
+                    "description": "Name of the Application Message Exchange Pattern. [SWIM-SERV-210]",
+                    "type": "string"
+                  },
+                  "reference": {
+                    "description": "An external reference at which the document can be retrieved or consulted.",
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "name"
+                ],
+                "properties":{
+                  "name": {
+                    "description": "Name of the Application Message Exchange Pattern. Can take one of the enum values defined by CodeApplicationMessageExchangePatternType. [SWIM-SERV-210]",
+                    "$ref": "#/definitions/CodeApplicationMessageExchangePatternType"
+                  }
+                }
+              }
+            ]
           },
           "minItems": 1
         },

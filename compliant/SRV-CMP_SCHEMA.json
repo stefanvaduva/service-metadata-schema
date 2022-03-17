@@ -1146,18 +1146,20 @@
       }
     },
     "ServiceMonitoring": {
-      "description": "Tracking state and operational conditions related to the execution, performance, and real-world effects of services. [SWIM-SERV-028]",
+      "description": "Tracking state and operational conditions related to the execution, performance, and real-world effects of services. [SWIM-SERV-230]",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "monitoringDescription"
-      ],
       "properties": {
         "monitoringDescription": {
-          "description": "Description if available of the existing monitoring capabilities and how this can be used by the consumer. [SWIM-SERV-028].",
+          "description": "Description if available of the existing monitoring capabilities and how this can be used by the consumer. [SWIM-SERV-230].",
+          "type": "string"
+        },
+        "reference": {
+          "description": "An external reference at which the document can be retrieved or consulted.",
           "type": "string"
         }
-      }
+      },
+      "minProperties": 1
     },
     "ServiceProvider": {
       "description": "An entity (person or organization) that offers the use of capabilities by means of a service. [SWIM-SERV-060]",
@@ -1211,7 +1213,7 @@
           }
         },
         "serviceMonitoring": {
-          "description": "A service monitoring mechanism available to service consumers. [SWIM-SERV-028]",
+          "description": "A service monitoring mechanism available to service consumers. [SWIM-SERV-230]",
           "$ref": "#/definitions/ServiceMonitoring"
         },
         "behaviour": {

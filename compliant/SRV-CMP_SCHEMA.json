@@ -832,23 +832,27 @@
       }
     },
     "ServiceBehaviour": {
-      "description": "The manner in which a service operates under normal and unexpected conditions. [SWIM-SERV-025]",
+      "description": "The manner in which a service operates under normal and unexpected conditions. [SWIM-SERV-220]",
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "name",
-        "description"
+        "name"
       ],
       "properties": {
         "name": {
-          "description": "The name of the service behaviour. [SWIM-SERV-025]",
+          "description": "The name of the service behaviour. [SWIM-SERV-220]",
           "type": "string"
         },
         "description": {
-          "description": "The description of the service behaviour. [SWIM-SERV-025]",
+          "description": "The description of the service behaviour. [SWIM-SERV-220]",
+          "type": "string"
+        },
+        "reference": {
+          "description": "An external reference at which the document can be retrieved or consulted.",
           "type": "string"
         }
-      }
+      },
+      "minProperties": 2
     },
     "ServiceCategorisation": {
       "description": "A taxonomy used to classify a service by the type of service provided or by some other technological or architectural solution. [SWIM-SERV-009]",
@@ -1211,7 +1215,7 @@
           "$ref": "#/definitions/ServiceMonitoring"
         },
         "behaviour": {
-          "description": "The manner in which a service operates under normal and unexpected conditions. [SWIM-SERV-025]",
+          "description": "The manner in which a service operates under normal and unexpected conditions. [SWIM-SERV-220]",
           "type": "array",
           "items": {
             "$ref": "#/definitions/ServiceBehaviour"

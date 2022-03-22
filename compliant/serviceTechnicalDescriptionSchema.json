@@ -1,0 +1,196 @@
+{
+  "title": "Service Technical Description Schema: Draft",
+  "description": "Draft of the Schema for the Service Technical Description",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "serviceInterfaces": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ServiceInterface"
+      }
+    }
+  },
+  "definitions": {
+    "ServiceInterface": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "externalDocs": {
+          "$ref": "#/definitions/Reference"
+        },
+        "schema": {
+          "$ref": "#/definitions/Reference"
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Resource"
+          }
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Operation"
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Message"
+          }
+        },
+        "binding": {
+          "$ref": "#/definitions/Binding"
+        },
+        "endpoint": {
+          "$ref": "#/definitions/Endpoint"
+        },
+        "messageExchangePattern": {
+          "type": "string",
+          "enum": [
+            "FIRE_AND_FORGET",
+            "SYNCHRONOUS_REQUEST_REPLY"
+          ]
+        }
+      }
+    },
+    "Reference": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "Resource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "externalDocs": {
+          "#ref": "#/definitions/ExternalDocumentation"
+        },
+        "resourceType": {
+          "type": "string"
+        },
+        "url": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "$ref": "#/definitions/Endpoint"
+            }
+          ]
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Operation"
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Message"
+          }
+        }
+      }
+    },
+    "Operation": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Parameter"
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Message"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Resource"
+          }
+        },
+        "binding_method": {
+          "$ref": "#/definitions/BindingMethod"
+        }
+      }
+    },
+    "Parameter": {
+      "type": "object"
+    },
+    "Message": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "schema": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["$ref"],
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "format": "uri-reference"
+                }
+              }
+            },
+            {
+              "$ref": "#/definitions/Reference"
+            }
+          ]
+        }
+      }
+    },
+    "Endpoint": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "Binding": {
+      "type": "string"
+    },
+    "BindingMethod": {
+      "type": "string"
+    }
+  }
+}

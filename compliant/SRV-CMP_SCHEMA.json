@@ -423,6 +423,10 @@
         "airmVersion": {
           "description": "The applicable version of the ATM Information Reference Model. [SWIM-SERV-023]",
           "type": "string"
+        },
+        "reference": {
+          "description": "An external reference at which the document can be retrieved or consulted.",
+          "type": "string"
         }
       }
     },

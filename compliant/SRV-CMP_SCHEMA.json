@@ -1115,7 +1115,7 @@
       }
     },
     "ServiceInformationDescription": {
-      "description": "A container for the description of the information exchanged by the information service. ",
+      "description": "A container for the description of the information exchanged by the information service. [SWIM-SERV-290]",
       "type": "object",
       "additionalProperties": false,
       "required": [

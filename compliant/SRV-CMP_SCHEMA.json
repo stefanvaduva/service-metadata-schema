@@ -250,7 +250,7 @@
       }
     },
     "Filtering": {
-      "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-024]",
+      "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-310]",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -258,7 +258,7 @@
       ],
       "properties": {
         "capability": {
-          "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-024]",
+          "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-310]",
           "type": "array",
           "items": {
             "$ref": "#/definitions/FilteringCapability"
@@ -267,23 +267,27 @@
       }
     },
     "FilteringCapability": {
-      "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-024]",
+      "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-310]",
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "name",
-        "description"
+        "name"
       ],
       "properties": {
         "name": {
-          "description": "The name of the filtering capability. [SWIM-SERV-024]",
+          "description": "The name of the filtering capability. [SWIM-SERV-310]",
           "type": "string"
         },
         "description": {
-          "description": "The description of the filtering capability. [SWIM-SERV-024]",
+          "description": "The description of the filtering capability. [SWIM-SERV-310]",
+          "type": "string"
+        },
+        "reference": {
+          "description": "An external reference at which the document can be retrieved or consulted. [SWIM-SERV-140]",
           "type": "string"
         }
-      }
+      },
+      "minProperties": 2
     },
     "Functionality": {
       "description": "A type of activity describing the functionality of a service. [SWIM-SERV-140]",
@@ -1161,7 +1165,7 @@
           "minItems": 1
         },
         "filtering": {
-          "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-024]",
+          "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-310]",
           "$ref": "#/definitions/Filtering"
         },
         "sourceOfInformation": {

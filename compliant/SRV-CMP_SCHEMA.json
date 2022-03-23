@@ -423,6 +423,18 @@
         "airmCorrespondence": {
           "description": "The semantic correspondence of the element with the ATM Information Reference Model. [SWIM-SERV-290]",
           "type": "string"
+        },
+        "cardinality": {
+          "description": "The cardinality applicable to the element, including whether the element is optional, conditional or mandatory in the exchange. [SWIM-SERV-300]",
+          "type": "string"
+        },
+        "constraints": {
+          "description": "Constraints applicable to the element, e.g., value ranges, special values, character set restrictions... [SWIM-SERV-300]",
+          "type": "string"
+        },
+        "path": {
+          "description": "An expression representing the structural relation of the element within the payload. [SWIM-SERV-300]",
+          "type": "string"
         }
       }
     },

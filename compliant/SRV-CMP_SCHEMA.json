@@ -399,33 +399,29 @@
       }
     },
     "InformationDefinition": {
-      "description": "A formal representation of information concepts or data concepts. [SWIM-SERV-022]",
+      "description": "A formal representation of information concepts or data concepts. [SWIM-SERV-290]",
       "type": "object",
       "additionalProperties": false,
       "required": [
         "name",
-        "description",
-        "airmConformant"
+        "definition",
+        "airmCorrespondence"
       ],
       "properties": {
         "name": {
-          "description": "The name of the Information Definition. [SWIM-SERV-022]",
+          "description": "The name of the element. [SWIM-SERV-290]",
           "type": "string"
         },
-        "description": {
-          "description": "The description of the Information Definition. [SWIM-SERV-022]",
+        "definition": {
+          "description": "The definition of the element. [SWIM-SERV-290]",
           "type": "string"
         },
-        "airmConformant": {
-          "description": "An indication whether the information definition used by the service conforms to the ATM Information Reference Model. [SWIM-SERV-023]",
-          "type": "boolean"
-        },
-        "airmVersion": {
-          "description": "The applicable version of the ATM Information Reference Model. [SWIM-SERV-023]",
+        "datatype": {
+          "description": "The data type used by the element whether the information definition used by the service conforms to the ATM Information Reference Model. [SWIM-SERV-290]",
           "type": "string"
         },
-        "reference": {
-          "description": "An external reference at which the document can be retrieved or consulted.",
+        "airmCorrespondence": {
+          "description": "The semantic correspondence of the element with the ATM Information Reference Model. [SWIM-SERV-290]",
           "type": "string"
         }
       }
@@ -1124,12 +1120,25 @@
       ],
       "properties": {
         "informationDefinition": {
-          "description": "A formal representation of information concepts or data concepts. [SWIM-SERV-022]",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/InformationDefinition"
-          },
-          "minItems": 1
+          "description": "A formal representation of information concepts or data concepts. [SWIM-SERV-290]",
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "reference": {
+                  "description": "An external reference at which the document can be retrieved or consulted.",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InformationDefinition"
+              },
+              "minItems": 1
+            }
+          ]
         },
         "exchangeSchema": {
           "description": "Formal description of the data involved in an information exchange. [SWIM-SERV-019]",

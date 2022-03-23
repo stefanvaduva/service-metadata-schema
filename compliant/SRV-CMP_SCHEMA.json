@@ -954,7 +954,7 @@
                 "required": [
                   "name"
                 ],
-                "properties":{
+                "properties": {
                   "name": {
                     "description": "Name of the Application Message Exchange Pattern. Can take one of the enum values defined by CodeApplicationMessageExchangePatternType. [SWIM-SERV-210]",
                     "$ref": "#/definitions/CodeApplicationMessageExchangePatternType"

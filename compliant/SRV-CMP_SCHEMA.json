@@ -34,7 +34,7 @@
   },
   "definitions": {
     "Abbreviation": {
-      "description": "An abbreviation or acronym used by the service description. [SWIM-SERV-003]",
+      "description": "An abbreviation or acronym used by the service description. [SWIM-SERV-350]",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -43,11 +43,11 @@
       ],
       "properties": {
         "name": {
-          "description": "The name of the abbreviation. [SWIM-SERV-003]",
+          "description": "The name of the abbreviation. [SWIM-SERV-350]",
           "type": "string"
         },
         "description": {
-          "description": "The description of the abbreviation.",
+          "description": "The description of the abbreviation. [SWIM-SERV-350]",
           "type": "string"
         }
       }
@@ -158,10 +158,23 @@
         },
         "abbreviations": {
           "description": "Abbreviations or acronyms used by the service description.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Abbreviation"
-          }
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Abbreviation"
+              }
+            },
+            {
+              "type": "object",
+              "properties": {
+                "reference": {
+                  "description": "An external reference at which the document can be retrieved or consulted.",
+                  "type": "string"
+                }
+              }
+            }
+          ]
         }
       }
     },

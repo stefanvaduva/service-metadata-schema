@@ -34,7 +34,7 @@
   },
   "definitions": {
     "Abbreviation": {
-      "description": "An abbreviation or acronym used by the service description. [SWIM-SERV-003]",
+      "description": "An abbreviation or acronym used by the service description. [SWIM-SERV-350]",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -43,11 +43,11 @@
       ],
       "properties": {
         "name": {
-          "description": "The name of the abbreviation. [SWIM-SERV-003]",
+          "description": "The name of the abbreviation. [SWIM-SERV-350]",
           "type": "string"
         },
         "description": {
-          "description": "The description of the abbreviation.",
+          "description": "The description of the abbreviation. [SWIM-SERV-350]",
           "type": "string"
         }
       }
@@ -158,10 +158,23 @@
         },
         "abbreviations": {
           "description": "Abbreviations or acronyms used by the service description.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Abbreviation"
-          }
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Abbreviation"
+              }
+            },
+            {
+              "type": "object",
+              "properties": {
+                "reference": {
+                  "description": "An external reference at which the document can be retrieved or consulted.",
+                  "type": "string"
+                }
+              }
+            }
+          ]
         }
       }
     },
@@ -250,7 +263,7 @@
       }
     },
     "Filtering": {
-      "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-024]",
+      "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-310]",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -258,7 +271,7 @@
       ],
       "properties": {
         "capability": {
-          "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-024]",
+          "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-310]",
           "type": "array",
           "items": {
             "$ref": "#/definitions/FilteringCapability"
@@ -267,23 +280,27 @@
       }
     },
     "FilteringCapability": {
-      "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-024]",
+      "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-310]",
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "name",
-        "description"
+        "name"
       ],
       "properties": {
         "name": {
-          "description": "The name of the filtering capability. [SWIM-SERV-024]",
+          "description": "The name of the filtering capability. [SWIM-SERV-310]",
           "type": "string"
         },
         "description": {
-          "description": "The description of the filtering capability. [SWIM-SERV-024]",
+          "description": "The description of the filtering capability. [SWIM-SERV-310]",
+          "type": "string"
+        },
+        "reference": {
+          "description": "An external reference at which the document can be retrieved or consulted. [SWIM-SERV-140]",
           "type": "string"
         }
-      }
+      },
+      "minProperties": 2
     },
     "Functionality": {
       "description": "A type of activity describing the functionality of a service. [SWIM-SERV-140]",
@@ -399,33 +416,41 @@
       }
     },
     "InformationDefinition": {
-      "description": "A formal representation of information concepts or data concepts. [SWIM-SERV-022]",
+      "description": "A formal representation of information concepts or data concepts. [SWIM-SERV-290]",
       "type": "object",
       "additionalProperties": false,
       "required": [
         "name",
-        "description",
-        "airmConformant"
+        "definition",
+        "airmCorrespondence"
       ],
       "properties": {
         "name": {
-          "description": "The name of the Information Definition. [SWIM-SERV-022]",
+          "description": "The name of the element. [SWIM-SERV-290]",
           "type": "string"
         },
-        "description": {
-          "description": "The description of the Information Definition. [SWIM-SERV-022]",
+        "definition": {
+          "description": "The definition of the element. [SWIM-SERV-290]",
           "type": "string"
         },
-        "airmConformant": {
-          "description": "An indication whether the information definition used by the service conforms to the ATM Information Reference Model. [SWIM-SERV-023]",
-          "type": "boolean"
-        },
-        "airmVersion": {
-          "description": "The applicable version of the ATM Information Reference Model. [SWIM-SERV-023]",
+        "datatype": {
+          "description": "The data type used by the element whether the information definition used by the service conforms to the ATM Information Reference Model. [SWIM-SERV-290]",
           "type": "string"
         },
-        "reference": {
-          "description": "An external reference at which the document can be retrieved or consulted.",
+        "airmCorrespondence": {
+          "description": "The semantic correspondence of the element with the ATM Information Reference Model. [SWIM-SERV-290]",
+          "type": "string"
+        },
+        "cardinality": {
+          "description": "The cardinality applicable to the element, including whether the element is optional, conditional or mandatory in the exchange. [SWIM-SERV-300]",
+          "type": "string"
+        },
+        "constraints": {
+          "description": "Constraints applicable to the element, e.g., value ranges, special values, character set restrictions... [SWIM-SERV-300]",
+          "type": "string"
+        },
+        "path": {
+          "description": "An expression representing the structural relation of the element within the payload. [SWIM-SERV-300]",
           "type": "string"
         }
       }
@@ -958,7 +983,7 @@
                 "required": [
                   "name"
                 ],
-                "properties":{
+                "properties": {
                   "name": {
                     "description": "Name of the Application Message Exchange Pattern. Can take one of the enum values defined by CodeApplicationMessageExchangePatternType. [SWIM-SERV-210]",
                     "$ref": "#/definitions/CodeApplicationMessageExchangePatternType"
@@ -1124,12 +1149,25 @@
       ],
       "properties": {
         "informationDefinition": {
-          "description": "A formal representation of information concepts or data concepts. [SWIM-SERV-022]",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/InformationDefinition"
-          },
-          "minItems": 1
+          "description": "A formal representation of information concepts or data concepts. [SWIM-SERV-290]",
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "reference": {
+                  "description": "An external reference at which the document can be retrieved or consulted.",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InformationDefinition"
+              },
+              "minItems": 1
+            }
+          ]
         },
         "exchangeSchema": {
           "description": "Formal description of the data involved in an information exchange. [SWIM-SERV-019]",
@@ -1140,7 +1178,7 @@
           "minItems": 1
         },
         "filtering": {
-          "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-024]",
+          "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-310]",
           "$ref": "#/definitions/Filtering"
         },
         "sourceOfInformation": {

@@ -14,6 +14,10 @@
   "definitions": {
     "ServiceInterface": {
       "type": "object",
+      "required": [
+        "name",
+        "description"
+      ],
       "properties": {
         "name": {
           "type": "string"
@@ -21,7 +25,7 @@
         "description": {
           "type": "string"
         },
-        "externalDocs": {
+        "reference": {
           "$ref": "#/definitions/Reference"
         },
         "schema": {
@@ -81,33 +85,27 @@
         "description": {
           "type": "string"
         },
-        "externalDocs": {
-          "#ref": "#/definitions/ExternalDocumentation"
+        "reference": {
+          "#ref": "#/definitions/Reference"
         },
         "resourceType": {
           "type": "string"
         },
         "url": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "$ref": "#/definitions/Endpoint"
-            }
-          ]
+          "$ref": "#/definitions/Endpoint"
         },
         "operations": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Operation"
+            "type": "string",
+            "format": "json-pointer"
           }
         },
         "messages": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Message"
+            "type": "string",
+            "format": "json-pointer"
           }
         }
       }
@@ -130,13 +128,15 @@
         "messages": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Message"
+            "type": "string",
+            "format": "json-pointer"
           }
         },
         "resources": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Resource"
+            "type": "string",
+            "format": "json-pointer"
           }
         },
         "binding_method": {
@@ -160,7 +160,9 @@
           "oneOf": [
             {
               "type": "object",
-              "required": ["$ref"],
+              "required": [
+                "$ref"
+              ],
               "properties": {
                 "$ref": {
                   "type": "string",
@@ -176,15 +178,8 @@
       }
     },
     "Endpoint": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "uri"
-        },
-        {
-          "type": "object"
-        }
-      ]
+      "type": "string",
+      "format": "uri"
     },
     "Binding": {
       "type": "string"

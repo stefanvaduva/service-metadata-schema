@@ -572,6 +572,81 @@
         }
       }
     },
+    "Operation": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Parameter"
+          }
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "binding_method": {
+          "$ref": "#/definitions/BindingMethod"
+        }
+      }
+    },
+    "Parameter": {
+      "type": "object"
+    },
+    "Message": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "schema": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "$ref"
+              ],
+              "properties": {
+                "$ref": {
+                  "type": "string",
+                  "format": "uri-reference"
+                }
+              }
+            },
+            {
+              "$ref": "#/definitions/Reference"
+            }
+          ]
+        }
+      }
+    },
+    "Endpoint": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Binding": {
+      "type": "string"
+    },
+    "BindingMethod": {
+      "type": "string"
+    },
     "Reference": {
       "type": "object",
       "properties": {
@@ -626,98 +701,6 @@
         }
       }
     },
-      "Operation": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "parameters": {
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/Parameter"
-            }
-          },
-          "messages": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "direction": {
-                  "type": "string",
-                  "enum": [
-                    "in",
-                    "out"
-                  ]
-                }
-              }
-            }
-          },
-          "resources": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string"
-                }
-              }
-            },
-            "binding_method": {
-              "$ref": "#/definitions/BindingMethod"
-            }
-          }
-        },
-        "Parameter": {
-          "type": "object"
-        },
-        "Message": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
-            },
-            "schema": {
-              "oneOf": [
-                {
-                  "type": "object",
-                  "required": [
-                    "$ref"
-                  ],
-                  "properties": {
-                    "$ref": {
-                      "type": "string",
-                      "format": "uri-reference"
-                    }
-                  }
-                },
-                {
-                  "$ref": "#/definitions/Reference"
-                }
-              ]
-            }
-          }
-        },
-        "Endpoint": {
-          "type": "string",
-          "format": "uri"
-        },
-        "Binding": {
-          "type": "string"
-        },
-        "BindingMethod": {
-          "type": "string"
-        }
-      },
       "InterfaceProtocol": {
         "description": "A protocol used in transmitting the messages defined by the interface. [SWIM-SERV-019]",
         "type": "object",

@@ -652,6 +652,7 @@
     },
     "Reference": {
       "type": "object",
+      "required": ["url"],
       "properties": {
         "description": {
           "type": "string"

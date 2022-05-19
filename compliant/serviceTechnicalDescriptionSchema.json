@@ -97,15 +97,13 @@
         "operations": {
           "type": "array",
           "items": {
-            "type": "string",
-            "format": "json-pointer"
+            "type": "string"
           }
         },
         "messages": {
           "type": "array",
           "items": {
-            "type": "string",
-            "format": "json-pointer"
+            "type": "string"
           }
         }
       }
@@ -128,15 +126,13 @@
         "messages": {
           "type": "array",
           "items": {
-            "type": "string",
-            "format": "json-pointer"
+            "type": "string"
           }
         },
         "resources": {
           "type": "array",
           "items": {
-            "type": "string",
-            "format": "json-pointer"
+            "type": "string"
           }
         },
         "binding_method": {

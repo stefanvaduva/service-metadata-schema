@@ -532,6 +532,7 @@
           "type": "string"
         },
         "reference": {
+          "description": "A reference to the service interface documentation. [SWIM-SERV-240]",
           "$ref": "#/definitions/Reference"
         },
         "schema": {

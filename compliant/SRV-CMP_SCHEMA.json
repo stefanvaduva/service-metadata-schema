@@ -85,8 +85,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "name",
-        "description"
+        "name"
       ],
       "properties": {
         "name": {
@@ -96,8 +95,12 @@
         "description": {
           "description": "Description of the concept.",
           "type": "string"
+        },
+        "reference": {
+          "$ref": "#/definitions/Reference"
         }
-      }
+      },
+      "minProperties": 2
     },
     "ContactInformation": {
       "description": "Information used to correspond with the point of contact. [SWIM-SERV-070]",

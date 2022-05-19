@@ -81,7 +81,7 @@
       "minProperties": 3
     },
     "Concept": {
-      "description": "Optional information intended for a good understanding of the service. This may cover design concepts related to the service, logical model, design considerations, or any other information not pertaining to the other fields.",
+      "description": "Optional information intended for a good understanding of the service. This may cover design concepts related to the service, logical model, design considerations, or any other information not pertaining to the other fields. [SWIM-SERV-330, SWIM-SERV-340]",
       "type": "object",
       "additionalProperties": false,
       "required": [

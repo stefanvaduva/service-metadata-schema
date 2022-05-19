@@ -536,6 +536,7 @@
           "$ref": "#/definitions/Reference"
         },
         "schema": {
+          "description": "A reference to a machine readable service interface definition. [SWIM-SERV-320]",
           "$ref": "#/definitions/Reference"
         },
         "resources": {

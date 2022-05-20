@@ -560,7 +560,12 @@
             "$ref": "#/definitions/Message"
           }
         },
-        "binding": {
+        "serviceInterfaceBinding": {
+          "description": "A reference to the Service Interface Binding as specificed in the selected SWIM TI Profile. [SWIM-SERV-250]",
+          "$ref": "#/definitions/Binding"
+        },
+        "networkInterfaceBinding": {
+          "description": "A reference to the Network Interface Binding as specificed in the selected SWIM TI Profile. [SWIM-SERV-250]",
           "$ref": "#/definitions/Binding"
         },
         "endpoint": {

@@ -459,7 +459,7 @@
       }
     },
     "InformationService": {
-      "description": "Description of an information service. [SWIM-SERV-001]",
+      "description": "Description of an information service. [SWIM-SERV-010]",
       "type": "object",
       "additionalProperties": false,
       "required": [

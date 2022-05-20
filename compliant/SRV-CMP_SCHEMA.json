@@ -650,7 +650,22 @@
       "format": "uri"
     },
     "Binding": {
-      "type": "string"
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "description": "Additional description detailing the configuration of the Binding. [SWIM-SERV-250]",
+          "type": "string"
+        },
+        "reference": {
+          "$ref": "#/definitions/Reference"
+        }
+      }
     },
     "BindingMethod": {
       "type": "string"

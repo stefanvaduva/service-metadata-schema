@@ -480,7 +480,7 @@
           "type": "string"
         },
         "serviceProvider": {
-          "description": "Description about who provides the service, when and how it is supported. [SWIM-SERV-008]",
+          "description": "Description about who provides the service, when and how it is supported. [SWIM-SERV-060]",
           "$ref": "#/definitions/ServiceProvider"
         },
         "serviceCategorisation": {

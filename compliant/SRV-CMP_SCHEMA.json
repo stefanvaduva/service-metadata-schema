@@ -698,7 +698,7 @@
         "resourceType": {
           "type": "string"
         },
-        "url": {
+        "path": {
           "$ref": "#/definitions/Endpoint"
         },
         "operations": {

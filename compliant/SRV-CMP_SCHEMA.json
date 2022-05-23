@@ -950,7 +950,7 @@
             "minItems": 1
           },
           "businessActivityType": {
-            "description": "The type of business activity. [SWIM-REG-0004]",
+            "description": "The type of business activity.",
             "type": "array",
             "items": {
               "$ref": "#/definitions/CodeBusinessActivityType"
@@ -958,7 +958,7 @@
             "minItems": 1
           },
           "intendedConsumer": {
-            "description": "The types of service consumers that this service is intended to serve. [SWIM-REG-0004]",
+            "description": "The types of service consumers that this service is intended to serve.",
             "type": "array",
             "items": {
               "$ref": "#/definitions/CodeStakeholderType"

@@ -196,7 +196,7 @@
           "$ref": "#/definitions/CodeDocumentType"
         },
         "title": {
-          "description": "The name by which the document is formally known. [SWIM-SERV-005;SWIM-SERV-010]",
+          "description": "The name by which the document is formally known.",
           "type": "string"
         },
         "version": {

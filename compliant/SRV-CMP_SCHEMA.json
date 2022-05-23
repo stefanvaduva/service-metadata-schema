@@ -383,7 +383,7 @@
       }
     },
     "ImplementedStandard": {
-      "description": "A standard used for the implementation of the service. [SWIM-SERV-010]",
+      "description": "A standard used for the implementation of the service. [SWIM-SERV-120]",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -413,7 +413,7 @@
           "$ref": "#/definitions/CodeServiceStandardType"
         },
         "conformanceStatement": {
-          "description": "A statement about the degree of conformance of the service against the standard. [SWIM-SERV-010]",
+          "description": "A statement about the degree of conformance of the service against the standard. [SWIM-SERV-120]",
           "type": "string"
         }
       }

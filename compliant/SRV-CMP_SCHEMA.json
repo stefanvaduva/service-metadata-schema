@@ -915,8 +915,6 @@
         "additionalProperties": false,
         "required": [
           "serviceType",
-          "businessActivityType",
-          "intendedConsumer",
           "informationCategory",
           "applicationMessageExchangePattern",
           "lifeCycle",

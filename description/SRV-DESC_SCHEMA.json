@@ -1568,22 +1568,7 @@
       },
       "CodeStakeholderType": {
         "description": "A code listing types of stakeholders.",
-        "type": "string",
-        "enum": [
-          "CIVIL_AIRSPACE_USER",
-          "MILITARY_AIRSPACE_USER",
-          "CIVIL_AIR_NAVIGATION_SERVICE_PROVIDER",
-          "MILITARY_AIR_NAVIGATION_SERVICE_PROVIDER",
-          "AIR_TRAFFIC_SERVICE_PROVIDER",
-          "REGULATED_METEOROLOGICAL_SERVICE_PROVIDER",
-          "AERONAUTICAL_INFORMATION_SERVICE_PROVIDER",
-          "COMMUNICATION_NAVIGATION_AND_SURVEILLANCE_SERVICE_PROVIDER",
-          "PROVIDER_OF_DATA_SERVICES",
-          "NETWORK_MANAGER",
-          "AIRPORT_OPERATOR",
-          "AIRSIDE_GROUND_HANDLER",
-          "MILITARY_DEFENCE_CENTRE"
-        ]
+        "type": "string"
       },
       "CodeSWIMServiceConformanceStatusType": {
         "description": "An indication of the status of the service with regard to SWIM Service conformance.",

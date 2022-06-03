@@ -1264,7 +1264,7 @@
             "type": "string"
           },
           "providerType": {
-            "description": "The type of service provider. [SWIM-SERV-009]",
+            "description": "The type of service provider. [SWIM-SERV-060]",
             "type": "array",
             "items": {
               "$ref": "#/definitions/CodeStakeholderType"

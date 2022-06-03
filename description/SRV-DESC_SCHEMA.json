@@ -1247,8 +1247,7 @@
         "additionalProperties": false,
         "required": [
           "provider",
-          "providerDescription",
-          "providerType"
+          "providerDescription"
         ],
         "properties": {
           "provider": {

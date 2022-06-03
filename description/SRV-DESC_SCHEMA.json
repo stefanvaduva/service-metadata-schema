@@ -1488,12 +1488,12 @@
           "ENVIRONMENT_INFORMATION"
         ]
       },
-      "CodeInterfaceSideType": {
-        "description": "An indication that the interface is a provider side interface or a consumer side interface.",
+      "CodeProvisionSideType": {
+        "description": "An indication that the operation is offered by the provider or the consumer.",
         "type": "string",
         "enum": [
-          "PROVIDER_SIDE_INTERFACE",
-          "CONSUMER_SIDE_INTERFACE"
+          "PROVIDER_SIDE",
+          "CONSUMER_SIDE"
         ]
       },
       "CodeLifeCycleStepType": {

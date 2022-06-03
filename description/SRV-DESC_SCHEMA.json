@@ -595,6 +595,10 @@
             "$ref": "#/definitions/Parameter"
           }
         },
+        "providerSide": {
+          "description": "Identification of the side that provides the operation; either provider or consumer. [SWIM-SERV-240]",
+          "$ref": "#/definitions/CodeProvisionSideType"
+        },
         "messages": {
           "type": "array",
           "items": {

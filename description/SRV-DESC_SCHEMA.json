@@ -1231,6 +1231,10 @@
             "description": "The full official name of the organisation. [SWIM-SERV-060]",
             "type": "string"
           },
+          "abbreviation": {
+            "description": "The abbreviated name of the organisation. [SWIM-SERV-060]",
+            "type": "string"
+          },
           "providerDescription": {
             "description": "Description of the organisational unit responsible for the service. [SWIM-SERV-060]",
             "type": "string"

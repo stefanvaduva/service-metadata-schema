@@ -1021,6 +1021,30 @@
           "geospatialCategorisation": {
             "description": "The geographic coverage of the information provided by the service. [SWIM-SERV-090]",
             "$ref": "#/definitions/GeographicalExtent"
+          },
+          "other": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "value"
+              ],
+              "properties": {
+                "name": {
+                  "description": "Name of the category. [SWIM-SERV-100]",
+                  "type": "string"
+                },
+                "value": {
+                  "description": "Value taken by the service in the category. [SWIM-SERV-100]",
+                  "type": "string"
+                },
+                "categorisationScheme": {
+                  "description": "A reference to the categorisation scheme used. [SWIM-SERV-100]",
+                  "$ref": "#/definitions/Reference"
+                }
+              }
+            }
           }
         }
       },

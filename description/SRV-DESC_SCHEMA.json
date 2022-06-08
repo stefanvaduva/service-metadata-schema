@@ -629,23 +629,7 @@
           "type": "string"
         },
         "schema": {
-          "oneOf": [
-            {
-              "type": "object",
-              "required": [
-                "$ref"
-              ],
-              "properties": {
-                "$ref": {
-                  "type": "string",
-                  "format": "uri-reference"
-                }
-              }
-            },
-            {
-              "$ref": "#/definitions/Reference"
-            }
-          ]
+          "$ref": "#/definitions/Reference"
         }
       }
     },

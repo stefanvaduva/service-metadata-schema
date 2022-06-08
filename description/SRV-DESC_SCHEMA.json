@@ -1341,7 +1341,7 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "description"
+          "type"
         ],
         "properties": {
           "type": {

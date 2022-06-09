@@ -623,7 +623,22 @@
       }
     },
     "Parameter": {
-      "type": "object"
+      "type": "object",
+      "required": [
+        "name",
+        "description"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
     },
     "Message": {
       "type": "object",

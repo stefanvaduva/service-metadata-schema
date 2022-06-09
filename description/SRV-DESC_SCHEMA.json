@@ -721,6 +721,10 @@
           "type": "array",
           "items": {
             "type": "object",
+            "required": [
+              "name",
+              "direction"
+            ],
             "properties": {
               "name": {
                 "type": "string"

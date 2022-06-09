@@ -686,6 +686,9 @@
     },
     "Endpoint": {
       "type": "object",
+      "required": [
+        "url"
+      ],
       "properties": {
         "name": {
           "type": "string"
@@ -699,8 +702,9 @@
         "resourceType": {
           "type": "string"
         },
-        "path": {
-          "$ref": "#/definitions/Endpoint"
+        "url": {
+          "type": "string",
+          "format": "uri"
         },
         "operations": {
           "type": "array",

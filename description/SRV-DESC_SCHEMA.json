@@ -1577,10 +1577,6 @@
         "NOT_VALIDATED"
       ]
     },
-    "CodeStakeholderType": {
-      "description": "A code listing types of stakeholders.",
-      "type": "string"
-    },
     "CodeSWIMServiceConformanceStatusType": {
       "description": "An indication of the status of the service with regard to SWIM Service conformance.",
       "type": "string",
@@ -1594,16 +1590,6 @@
       "enum": [
         "SYNCHRONOUS",
         "ASYNCHRONOUS"
-      ]
-    },
-    "CodeTechnicalResourceType": {
-      "description": "A code listing types of technical resources.",
-      "type": "string",
-      "enum": [
-        "QUEUE",
-        "REST_RESOURCE",
-        "SERVICE_REQUEST_LISTENER",
-        "TOPIC"
       ]
     }
   }

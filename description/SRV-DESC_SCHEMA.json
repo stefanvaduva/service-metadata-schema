@@ -611,12 +611,6 @@
             }
           }
         },
-        "resources": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "binding_method": {
           "$ref": "#/definitions/BindingMethod"
         }

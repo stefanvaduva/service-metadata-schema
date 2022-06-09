@@ -589,6 +589,9 @@
             "$ref": "#/definitions/Parameter"
           }
         },
+        "idemptotency": {
+          "$ref": "#/definitions/CodeIdempotencyType"
+        },
         "messages": {
           "type": "array",
           "items": {

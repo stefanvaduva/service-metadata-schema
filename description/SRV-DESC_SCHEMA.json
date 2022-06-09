@@ -684,7 +684,7 @@
         }
       }
     },
-    "Resource": {
+    "Endpoint": {
       "type": "object",
       "properties": {
         "name": {

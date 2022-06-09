@@ -565,9 +565,6 @@
           "description": "A reference to the Network Interface Binding as specificed in the selected SWIM TI Profile. [SWIM-SERV-250]",
           "$ref": "#/definitions/Binding"
         },
-        "endpoint": {
-          "$ref": "#/definitions/Endpoint"
-        },
         "messageExchangePattern": {
           "type": "string",
           "enum": [

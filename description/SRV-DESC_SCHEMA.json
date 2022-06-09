@@ -648,10 +648,6 @@
         }
       }
     },
-    "Endpoint": {
-      "type": "string",
-      "format": "uri"
-    },
     "Binding": {
       "type": "object",
       "required": [

@@ -535,10 +535,14 @@
           "description": "A reference to a machine readable service interface definition. [SWIM-SERV-320]",
           "$ref": "#/definitions/Reference"
         },
-        "resources": {
+        "provisionSide": {
+          "description": "Identification of the side that provides the interface; either provider or consumer. [SWIM-SERV-240]",
+          "$ref": "#/definitions/CodeProvisionSideType"
+        },
+        "endpoints": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Resource"
+            "$ref": "#/definitions/Endpoint"
           }
         },
         "operations": {
@@ -587,10 +591,6 @@
           "items": {
             "$ref": "#/definitions/Parameter"
           }
-        },
-        "providerSide": {
-          "description": "Identification of the side that provides the operation; either provider or consumer. [SWIM-SERV-240]",
-          "$ref": "#/definitions/CodeProvisionSideType"
         },
         "messages": {
           "type": "array",

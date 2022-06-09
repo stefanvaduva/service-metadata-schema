@@ -728,6 +728,13 @@
             "properties": {
               "name": {
                 "type": "string"
+              },
+              "direction": {
+                "type": "string",
+                "enum": [
+                  "IN",
+                  "OUT"
+                ]
               }
             }
           }

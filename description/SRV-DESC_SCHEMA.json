@@ -1380,45 +1380,21 @@
       },
       "minProperties": 2
     },
+    "CodeStakeHoldertype": {
+      "description": "A code listing types of stakeholders. See values: http://reference.swim.aero/information-services/service-categories/CodeStakeholderType",
+      "type": "string"
+    },
     "CodeAccessAndUseConditionType": {
       "description": "A code listing access and use conditions. [SWIM-SERV-150], [SWIM-SERV-160]",
-      "type": "string",
-      "enum": [
-        "LEGAL_CONSTRAINT",
-        "SERVICE_POLICY",
-        "SERVICE_CONSUMPTION_CONSTRAINT",
-        "SECURITY_CONSTRAINT",
-        "OTHER"
-      ]
+      "type": "string"
     },
     "CodeApplicationMessageExchangePatternType": {
-      "description": "A code listing types of application message exchange patterns.",
-      "type": "string",
-      "enum": [
-        "REQUEST_REPLY",
-        "ONE_WAY",
-        "PUBLISH_SUBSCRIBE",
-        "FAN_OUT",
-        "SYNCHRONOUS_REQUEST_REPLY",
-        "ASYNCHRONOUS_REQUEST_REPLY",
-        "PUBLISH_SUBSCRIBE_WITH_PUSH_MECHANISM",
-        "PUBLISH_SUBSCRIBE_WITH_PULL_MECHANISM",
-        "BROKERED_PUBLISH_SUBSCRIBE_WITH_PUSH_MECHANISM"
-      ]
+      "description": "A code listing types of application message exchange patterns. See values: http://reference.swim.aero/information-services/service-categories/CodeApplicationMessageExchangePatternType",
+      "type": "string"
     },
     "CodeBusinessActivityType": {
-      "description": "A code listing the types of business activities.",
-      "type": "string",
-      "enum": [
-        "AERODROME_OPERATION",
-        "AIRSPACE_ORGANISATION_AND_MANAGEMENT",
-        "AIRSPACE_USER_OPERATIONS",
-        "CONFLICT_MANAGEMENT",
-        "DEMAND_AND_CAPACITY_BALANCING",
-        "INFORMATION_MANAGEMENT",
-        "SERVICE_DELIVERY_MANAGEMENT",
-        "TRAFFIC_SYNCHRONISATION"
-      ]
+      "description": "A code listing the types of business activities. See values: http://reference.swim.aero/information-services/service-categories/CodeBusinessActivityType",
+      "type": "string"
     },
     "CodeContactInformationType": {
       "description": "A code listing types of contact information.",
@@ -1441,38 +1417,11 @@
     },
     "CodeDocumentType": {
       "description": "A code describing types of documents.",
-      "type": "string",
-      "enum": [
-        "POLICY_DOCUMENT",
-        "SERVICE_STANDARD",
-        "QUALITY_OF_SERVICE_DOCUMENT",
-        "SERVICE_MODEL",
-        "SERVICE_CERTIFICATION",
-        "CODE_EXAMPLE",
-        "SERVICE_BEHAVIOUR_DESCRIPTION",
-        "PROTOCOL_SPECIFICATION",
-        "MACHINE_READABLE_SERVICE_DESCRIPTION",
-        "SERVICE_SPECIFICATION",
-        "MESSAGE_EXAMPLE",
-        "SERVICE_VALIDATION_REPORT",
-        "AIRM_TRACE",
-        "INFORMATION_DEFINITION"
-      ]
+      "type": "string"
     },
     "CodeICAORegionType": {
-      "description": "The list of ICAO Regions as defined in Appendix 1 to the Directives to Regional Air Navigation Meetings and Rules of Procedure for their Conduct (ICAO Doc 8-AN/874).",
-      "type": "string",
-      "enum": [
-        "AFI",
-        "ASIA",
-        "CAR",
-        "EUR",
-        "MID",
-        "NAM",
-        "NAT",
-        "PAC",
-        "SAM"
-      ]
+      "description": "The list of ICAO Regions as defined in Appendix 1 to the Directives to Regional Air Navigation Meetings and Rules of Procedure for their Conduct (ICAO Doc 8-AN/874). See values: http://reference.swim.aero/information-services/service-categories/CodeICAORegionType",
+      "type": "string"
     },
     "CodeIdempotencyType": {
       "description": "A code indicating whether the operation is idempotent or non-idempotent.",
@@ -1483,17 +1432,8 @@
       ]
     },
     "CodeInformationExchangeCategory": {
-      "description": "A categorisation of services based on information domains. [SWIM-SERV-100]. Ref.: https://reference.swim.aero/information-services/service-categories/CodeInformationDomainType.html",
-      "type": "string",
-      "enum": [
-        "AERONAUTICAL_INFORMATION",
-        "METEOROLOGICAL_INFORMATION",
-        "FLIGHT_INFORMATION",
-        "SWIM_INFRASTRUCTURE_INFORMATION",
-        "CAPACITY_DEMAND_AND_FLOW_INFORMATION",
-        "SURVEILLANCE_INFORMATION",
-        "ENVIRONMENT_INFORMATION"
-      ]
+      "description": "A categorisation of services based on information domains. [SWIM-SERV-100]. See values: https://reference.swim.aero/information-services/service-categories/CodeInformationDomainType.html",
+      "type": "string"
     },
     "CodeProvisionSideType": {
       "description": "An indication that the operation is offered by the provider or the consumer.",
@@ -1504,57 +1444,20 @@
       ]
     },
     "CodeLifeCycleStepType": {
-      "description": "A classification of services based on their current, past, or future availability for provisioning.",
-      "type": "string",
-      "enum": [
-        "OPERATIONAL",
-        "PROSPECTIVE",
-        "RETIRED"
-      ]
+      "description": "A classification of services based on their current, past, or future availability for provisioning. See values: http://reference.swim.aero/information-services/service-categories/CodeLifeCycleStageType",
+      "type": "string"
     },
     "CodeNetworkInterfaceBindingType": {
       "description": "A code listing the interface bindings that enable the SWIM TI to exchange data with the network.",
-      "type": "string",
-      "enum": [
-        "IPV4_UNICAST",
-        "IPV4_SECURE_UNICAST",
-        "IPV6_UNICAST",
-        "IPV6_SECURE_UNICAST"
-      ]
+      "type": "string"
     },
     "CodePrimitiveMessageExchangePatternType": {
       "description": "A code listing types of primitive message exchange patterns.",
-      "type": "string",
-      "enum": [
-        "FIRE_AND_FORGET",
-        "SYNCHRONOUS_REQUEST_RESPONSE"
-      ]
+      "type": "string"
     },
     "CodeServiceInterfaceBindingType": {
       "description": "A code listing the interface bindings that enable services to exchange data with consuming applications.",
-      "type": "string",
-      "enum": [
-        "SWIM_TI_YP_1_0_WS_LIGHT",
-        "SWIM_TI_YP_1_1_WS_LIGHT",
-        "SWIM_TI_YP_1_0_WS_SOAP",
-        "SWIM_TI_YP_1_1_WS_SOAP",
-        "SWIM_TI_YP_1_0_WS_SOAP_WITH_BASIC_MESSAGE_SECURITY",
-        "SWIM_TI_YP_1_1_WS_SOAP_WITH_BASIC_MESSAGE_SECURITY",
-        "SWIM_TI_YP_1_0_WS_SOAP_WITH_MESSAGE_SECURITY",
-        "SWIM_TI_YP_1_1_WS_SOAP_WITH_MESSAGE_SECURITY",
-        "SWIM_TI_YP_1_0_WS_SOAP_WITH_FEDERATED_SECURITY",
-        "SWIM_TI_YP_1_1_WS_SOAP_WITH_FEDERATED_SECURITY",
-        "SWIM_TI_YP_1_0_WS-N_SOAP",
-        "SWIM_TI_YP_1_1_WS-N_SOAP",
-        "SWIM_TI_YP_1_0_WS-N_SOAP_WITH_BASIC_MESSAGE_SECURITY",
-        "SWIM_TI_YP_1_1_WS-N_SOAP_WITH_BASIC_MESSAGE_SECURITY",
-        "SWIM_TI_YP_1_0_WS-N_SOAP_WITH_MESSAGE_SECURITY",
-        "SWIM_TI_YP_1_1_WS-N_SOAP_WITH_MESSAGE_SECURITY",
-        "SWIM_TI_YP_1_0_WS-N_SOAP_WITH_FEDERATED_SECURITY",
-        "SWIM_TI_YP_1_1_WS-N_SOAP_WITH_FEDERATED_SECURITY",
-        "SWIM_TI_YP_1_0_AMQP_MESSAGING",
-        "SWIM_TI_YP_1_1_AMQP_MESSAGING"
-      ]
+      "type": "string"
     },
     "CodeServiceStandardType": {
       "description": "A code listing types of service standards.",
@@ -1568,14 +1471,7 @@
     },
     "CodeServiceValidationType": {
       "description": "A code listing validation methods. [SWIM-SERV-200]",
-      "type": "string",
-      "enum": [
-        "COLLABORATIVE_VALIDATION",
-        "INDEPENDENT_VALIDATION",
-        "SELF_VALIDATION",
-        "USER_VALIDATION",
-        "NOT_VALIDATED"
-      ]
+      "type": "string"
     },
     "CodeSWIMServiceConformanceStatusType": {
       "description": "An indication of the status of the service with regard to SWIM Service conformance.",

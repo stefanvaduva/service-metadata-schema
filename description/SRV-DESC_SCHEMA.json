@@ -573,6 +573,11 @@
     },
     "Operation": {
       "type": "object",
+      "required": [
+        "name",
+        "description",
+        "idempotency"
+      ],
       "properties": {
         "name": {
           "type": "string"
@@ -636,6 +641,11 @@
     },
     "Message": {
       "type": "object",
+      "required": [
+        "name",
+        "description",
+        "schema"
+      ],
       "properties": {
         "name": {
           "type": "string"

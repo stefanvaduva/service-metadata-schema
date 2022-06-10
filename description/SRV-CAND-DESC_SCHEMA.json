@@ -292,7 +292,7 @@
         }
       }
     },
-    "GeographicalExtent": {
+    "InformationGeographicalExtent": {
       "description": "The geographic coverage of the information provided by the service. [SWIM-REG-0004,SERV-OVW-008]",
       "type": "object",
       "additionalProperties": false,
@@ -328,6 +328,10 @@
           "items": {
             "$ref": "#/definitions/CodeICAORegionType"
           }
+        },
+        "geometry": {
+          "description": "A geoJSON GeometryCollection allowing to describe the geographical geometry of the InformationGeographicalExtent.",
+          "$ref": "https://geojson.org/schema/GeometryCollection.json"
         }
       }
     },
@@ -771,7 +775,7 @@
         },
         "geospatialCategorisation": {
           "description": "The geographic coverage of the information provided by the service. [SWIM-SERV-009]",
-          "$ref": "#/definitions/GeographicalExtent"
+          "$ref": "#/definitions/InformationGeographicalExtent"
         }
       }
     },

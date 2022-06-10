@@ -1387,7 +1387,7 @@
       },
       "minProperties": 2
     },
-    "CodeStakeHoldertype": {
+    "CodeStakeHolderType": {
       "description": "A code listing types of stakeholders. See values: http://reference.swim.aero/information-services/service-categories/CodeStakeholderType",
       "type": "string"
     },

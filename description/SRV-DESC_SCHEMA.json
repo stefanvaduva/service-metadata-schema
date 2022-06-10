@@ -566,11 +566,8 @@
           "$ref": "#/definitions/Binding"
         },
         "messageExchangePattern": {
-          "type": "string",
-          "enum": [
-            "FIRE_AND_FORGET",
-            "SYNCHRONOUS_REQUEST_REPLY"
-          ]
+          "description": "The type of primitive MEP implemented by the interface.",
+          "$ref": "#/definitions/CodePrimitiveMessageExchangePatternType"
         }
       }
     },

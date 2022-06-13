@@ -373,6 +373,10 @@
           "items": {
             "$ref": "#/definitions/CodeICAORegionType"
           }
+        },
+        "geometry": {
+          "description": "A geoJSON GeometryCollection allowing to describe the geographical geometry of the InformationGeographicalExtent.",
+          "$ref": "https://geojson.org/schema/GeometryCollection.json"
         }
       }
     },

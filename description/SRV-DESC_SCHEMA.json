@@ -1385,7 +1385,7 @@
       "minProperties": 2
     },
     "CodeStakeholderType": {
-      "description": "A code listing types of stakeholders. See values: http://reference.swim.aero/information-services/service-categories/CodeStakeholderType",
+      "description": "A code listing types of stakeholders. See values: http://reference.swim.aero/information-services/service-categories/CodeStakeholderType.html",
       "type": "string"
     },
     "CodeAccessAndUseConditionType": {
@@ -1393,11 +1393,11 @@
       "type": "string"
     },
     "CodeApplicationMessageExchangePatternType": {
-      "description": "A code listing types of application message exchange patterns. See values: http://reference.swim.aero/information-services/service-categories/CodeApplicationMessageExchangePatternType",
+      "description": "A code listing types of application message exchange patterns. See values: http://reference.swim.aero/information-services/service-categories/CodeApplicationMessageExchangePatternType.html",
       "type": "string"
     },
     "CodeBusinessActivityType": {
-      "description": "A code listing the types of business activities. See values: http://reference.swim.aero/information-services/service-categories/CodeBusinessActivityType",
+      "description": "A code listing the types of business activities. See values: http://reference.swim.aero/information-services/service-categories/CodeBusinessActivityType.html",
       "type": "string"
     },
     "CodeContactInformationType": {
@@ -1424,7 +1424,7 @@
       "type": "string"
     },
     "CodeICAORegionType": {
-      "description": "The list of ICAO Regions as defined in Appendix 1 to the Directives to Regional Air Navigation Meetings and Rules of Procedure for their Conduct (ICAO Doc 8-AN/874). See values: http://reference.swim.aero/information-services/service-categories/CodeICAORegionType",
+      "description": "The list of ICAO Regions as defined in Appendix 1 to the Directives to Regional Air Navigation Meetings and Rules of Procedure for their Conduct (ICAO Doc 8-AN/874). See values: http://reference.swim.aero/information-services/service-categories/CodeICAORegionType.html",
       "type": "string"
     },
     "CodeIdempotencyType": {
@@ -1436,7 +1436,7 @@
       ]
     },
     "CodeInformationExchangeCategory": {
-      "description": "A categorisation of services based on information domains. [SWIM-SERV-100]. See values: https://reference.swim.aero/information-services/service-categories/CodeInformationDomainType.html",
+      "description": "A categorisation of services based on information domains. [SWIM-SERV-100]. See values: https://reference.swim.aero/information-services/service-categories/CodeRegulatedInformationExchangeType.html",
       "type": "string"
     },
     "CodeProvisionSideType": {
@@ -1448,7 +1448,7 @@
       ]
     },
     "CodeLifeCycleStepType": {
-      "description": "A classification of services based on their current, past, or future availability for provisioning. See values: http://reference.swim.aero/information-services/service-categories/CodeLifeCycleStageType",
+      "description": "A classification of services based on their current, past, or future availability for provisioning. See values: http://reference.swim.aero/information-services/service-categories/CodeLifeCycleStageType.html",
       "type": "string"
     },
     "CodeNetworkInterfaceBindingType": {

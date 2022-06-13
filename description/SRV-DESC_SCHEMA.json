@@ -595,7 +595,7 @@
             "$ref": "#/definitions/Parameter"
           }
         },
-        "idemptotency": {
+        "idempotency": {
           "$ref": "#/definitions/CodeIdempotencyType"
         },
         "messages": {

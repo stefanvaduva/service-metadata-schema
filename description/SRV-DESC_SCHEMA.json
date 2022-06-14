@@ -239,28 +239,6 @@
         }
       }
     },
-    "ExchangeSchema": {
-      "description": "Formal description of the data involved in an information exchange. [SWIM-SERV-019]",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "name",
-        "schemaLanguage"
-      ],
-      "properties": {
-        "name": {
-          "description": "The name of the exchange schema. [SWIM-SERV-019]",
-          "type": "string"
-        },
-        "reference": {
-          "$ref": "#/definitions/Reference"
-        },
-        "schemaLanguage": {
-          "description": "Description of the language used (e.g. XML, JSON). [SWIM-SERV-019]",
-          "type": "string"
-        }
-      }
-    },
     "Filtering": {
       "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-310]",
       "type": "object",

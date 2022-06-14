@@ -733,30 +733,6 @@
         }
       }
     },
-    "InterfaceProtocol": {
-      "description": "A protocol used in transmitting the messages defined by the interface. [SWIM-SERV-019]",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "description",
-        "name",
-        "type"
-      ],
-      "properties": {
-        "description": {
-          "description": "The description of the interface protocol. [SWIM-SERV-019]",
-          "type": "string"
-        },
-        "name": {
-          "description": "The name of the interface protocol. [SWIM-SERV-019]",
-          "type": "string"
-        },
-        "type": {
-          "description": "The type of interface protocol. [SWIM-SERV-019]",
-          "type": "string"
-        }
-      }
-    },
     "OperationalEnvironment": {
       "description": "Information about the operational environment is useful to get an understanding of the service. Information about the operational needs addressed by the service and the capabilities the service offers supports decision making in terms of the service suitability within a particular operational context. [SWIM-SERV-130]",
       "type": "object",

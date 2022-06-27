@@ -1033,7 +1033,8 @@
         },
         "dateInOperation": {
           "description": "Date at which the service went into operation or is planned to become operational.",
-          "type": "string"
+          "type": "string",
+          "format": "date"
         },
         "qualitiesOfService": {
           "description": "The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-180]",

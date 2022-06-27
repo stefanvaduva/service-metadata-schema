@@ -210,35 +210,6 @@
         }
       }
     },
-    "EndPoint": {
-      "description": "Location at which information is received to invoke and configure interaction. [SWIM-SERV-016]",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "address"
-      ],
-      "properties": {
-        "name": {
-          "description": "The name of the end point. [SWIM-SERV-016]",
-          "type": "string"
-        },
-        "description": {
-          "description": "The description of the entity. [SWIM-SERV-016]",
-          "type": "string"
-        },
-        "address": {
-          "description": "A network-visible identifier used to designate specific endpoints in a network. [SWIM-SERV-016]",
-          "type": "string"
-        },
-        "addressableResource": {
-          "description": "A resource that can be addressed through this End Point. [SWIM-SERV-016]",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Resource"
-          }
-        }
-      }
-    },
     "Filtering": {
       "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-310]",
       "type": "object",
@@ -822,25 +793,6 @@
         },
         "role": {
           "description": "The role of the point of contact.",
-          "type": "string"
-        }
-      }
-    },
-    "ProcessingConsideration": {
-      "description": "A step or action that is required to be taken on data received as part of a service request (input) in order to produce the desired output or change of internal state. [SWIM-SERV-021]",
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "name",
-        "description"
-      ],
-      "properties": {
-        "name": {
-          "description": "The name of the processing consideration. [SWIM-SERV-021]",
-          "type": "string"
-        },
-        "description": {
-          "description": "The description of the processing consideration. [SWIM-SERV-021]",
           "type": "string"
         }
       }

@@ -606,6 +606,9 @@
         "description": {
           "type": "string"
         },
+        "isError": {
+          "type": "boolean"
+        },
         "schema": {
           "$ref": "#/definitions/Reference"
         }

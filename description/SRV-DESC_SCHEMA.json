@@ -624,7 +624,7 @@
           "type": "string"
         },
         "description": {
-          "description": "Additional description detailing the configuration of the Binding and (if necessary) versions of the procotols used. [SWIM-SERV-250, SWIM-SERV-260]",
+          "description": "Additional description detailing the configuration of the Binding and (if necessary) versions of the protocols used. [SWIM-SERV-250, SWIM-SERV-260]",
           "type": "string"
         },
         "reference": {

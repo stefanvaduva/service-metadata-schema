@@ -1130,7 +1130,11 @@
               "type": "object",
               "properties": {
                 "reference": {
-                  "$ref": "#/definitions/Reference"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Reference"
+                },
+                "minItems": 1
                 }
               }
             },

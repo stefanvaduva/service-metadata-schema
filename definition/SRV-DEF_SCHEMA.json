@@ -18,7 +18,7 @@
     "Editorial note: this license is an instance of the BSD license template as provided by the Open Source Initiative: http://opensource.org/licenses/BSD-3-Clause",
     "Details on EUROCONTROL: http://www.eurocontrol.int"
   ],
-  "title": "Service Description schema for SWIM_DEFINITION",
+  "title": "Service Metadata Schema for service definitions",
   "description": "",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
@@ -56,6 +56,10 @@
       "description": "A condition which applies to accessing and using the service, such as legal constraint, service policies, service consumption constraints and security constraints. [SWIM-SERV-150]",
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "name",
+        "type"
+      ],
       "properties": {
         "name": {
           "description": "The name of the condition. [SWIM-SERV-150]",
@@ -97,6 +101,25 @@
       },
       "minProperties": 2
     },
+    "ContactInformation": {
+        "description": "Information used to correspond with the point of contact. [SWIM-SERV-070]",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "address"
+        ],
+        "properties": {
+          "type": {
+            "description": "The type of contact information. [SWIM-SERV-070]",
+            "$ref": "#/definitions/CodeContactInformationType"
+          },
+          "address": {
+            "description": "A phone number or an electronic mail address used to correspond with the point of contact. [SWIM-SERV-070]",
+            "type": "string"
+          }
+        }
+      },
     "DescriptionIdentification": {
       "description": "Information that supports the identification and citation of a service description. [SWIM-SERV-030]",
       "type": "object",
@@ -186,6 +209,45 @@
           "type": "string"
         }
       }
+    },
+    "Filtering": {
+      "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-310]",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capability"
+      ],
+      "properties": {
+        "capability": {
+          "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-310]",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FilteringCapability"
+          }
+        }
+      }
+    },
+    "FilteringCapability": {
+      "description": "A filtering capability, including meaning and syntax of filter expressions, which can be applied to the information exchange [SWIM-SERV-310]",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "description": "The name of the filtering capability. [SWIM-SERV-310]",
+          "type": "string"
+        },
+        "description": {
+          "description": "The description of the filtering capability. [SWIM-SERV-310]",
+          "type": "string"
+        },
+        "reference": {
+          "$ref": "#/definitions/Reference"
+        }
+      },
+      "minProperties": 2
     },
     "Functionality": {
       "description": "A type of activity describing the functionality of a service. [SWIM-SERV-140]",
@@ -335,9 +397,10 @@
       "additionalProperties": false,
       "required": [
         "serviceAbstract",
-        "serviceProvider",
+        "serviceDefinitionProvider",
         "serviceCategorisation",
         "generalDescription",
+        "informationDescription",
         "technicalDescription",
         "serviceInterface",
         "descriptionInformation",
@@ -348,9 +411,9 @@
           "description": "A brief summary of the service offering. [SWIM-SERV-050]",
           "type": "string"
         },
-        "serviceProvider": {
+        "serviceDefinitionProvider": {
           "description": "Description about who provides the service, when and how it is supported. [SWIM-SERV-060]",
-          "$ref": "#/definitions/ServiceProvider"
+          "$ref": "#/definitions/serviceDefinitionProvider"
         },
         "serviceCategorisation": {
           "description": "A taxonomy used to classify a service by the type of service provided or by some other technological or architectural solution.",
@@ -694,6 +757,52 @@
       },
       "minProperties": 2
     },
+    "PointOfContact": {
+      "description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "description": "The name of the point of contact.",
+          "type": "string"
+        },
+        "contactInformation": {
+          "description": "Information used to correspond with the point of contact.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactInformation"
+          }
+        },
+        "role": {
+          "description": "The role of the point of contact.",
+          "type": "string"
+        }
+      }
+    },
+    "QualityOfData": {
+      "description": "The expected minimum quality of the data to be provided by the service [SWIM-DEFN-185].",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "description": "The name of the quality of data.",
+          "type": "string"
+        },
+        "description": {
+          "description": "Description of the quality of data.",
+          "type": "string"
+        },
+        "reference": {
+          "$ref": "#/definitions/Reference"
+        }
+      }
+    },
     "QualityOfService": {
       "description": "The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-180]",
       "type": "object",
@@ -848,9 +957,6 @@
       "description": "References to complementary documents that provide additional details about the service. [SWIM-SERV-010]",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "implementedStandard"
-      ],
       "properties": {
         "serviceDocument": {
           "description": "A document that relates to the information service.",
@@ -900,11 +1006,6 @@
           },
           "minItems": 1
         },
-        "dateInOperation": {
-          "description": "Date at which the service went into operation or is planned to become operational.",
-          "type": "string",
-          "format": "date"
-        },
         "qualitiesOfService": {
           "description": "The degree or level of confidence that the performance of a service meets users requirements. [SWIM-SERV-180]",
           "type": "object",
@@ -936,6 +1037,14 @@
               "minItems": 1
             }
           }
+        },
+        "qualityOfData":{
+          "description": "The expected minimum quality of the data to be provided by the service. [SWIM-DEFN-185]",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QualityOfData"
+          },
+          "minItems": 1
         },
         "validation": {
           "description": "Activity whereby a service is checked for conformance with the service objectives and requirements. [SWIM-SERV-200]",
@@ -1004,6 +1113,10 @@
             }
           ]
         },
+        "filtering": {
+          "description": "The filtering capabilities, including meaning and syntax of filter expressions, which can be applied to the information exchange. [SWIM-SERV-310]",
+          "$ref": "#/definitions/Filtering"
+        },
         "sourceOfInformation": {
           "description": "A description of the origins of information provided by the information service along with an indication whether there were any subsequent modifications. [SWIM-SERV-190]",
           "type": "string"
@@ -1025,7 +1138,7 @@
       },
       "minProperties": 1
     },
-    "ServiceProvider": {
+    "serviceDefinitionProvider": {
       "description": "An entity (person or organization) that offers the use of capabilities by means of a service. [SWIM-SERV-060]",
       "type": "object",
       "additionalProperties": false,
@@ -1051,6 +1164,14 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/CodeStakeholderType"
+          },
+          "minItems": 1
+        },
+        "pointOfContact": {
+          "description": "List of persons or groups within the service provider organization, suitable for making a human contact for any purpose. [SWIM-SERV-070]",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PointOfContact"
           },
           "minItems": 1
         }
@@ -1159,6 +1280,17 @@
       "description": "A code listing the types of business activities. See values: http://reference.swim.aero/information-services/service-categories/CodeBusinessActivityType.html",
       "type": "string"
     },
+    "CodeContactInformationType": {
+        "description": "A code listing types of contact information.",
+        "type": "string",
+        "enum": [
+          "PHONE",
+          "EMAIL",
+          "URL",
+          "POSTAL",
+          "OTHER"
+        ]
+      },
     "CodeDirectionType": {
       "description": "A code that indicates whether the message is input or output. ",
       "type": "string",
